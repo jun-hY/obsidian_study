@@ -1,0 +1,142 @@
+
+### create-react-app(CRA) 설치법
+
+1. nodeJs 설치(재부팅)
+2. cmd에서 밑의 명령 실행
+```
+cd 원하는 경로 이동
+npx create-react-app 프로젝트폴더명
+cd 프로젝트 폴더 이동
+npm run start(or npm start)
+```
+
+### CRA 구조
+
+src -> 소스코드 경로
+css -> module별로 작성
+btn.js에 css를 적용 시킬때 btn.module.css를 작성해 btn.js에 import
+
+분할 정의 구조
+
+### Component
+React는 Component를 작성하여 UI의 재사용을 쉽게 한다.
+간단히 사용자 함수형태로 정의된 html코드 뭉치라 보면 되겠다.
+
+Btn.js
+```
+function Btn() {
+	return <button></button>
+}
+
+export defalut Btn;
+```
+App.js
+```
+import Btn from "./Btn.js"
+
+function App() {
+	return (
+		<div>
+			<Btn />
+		</div>
+	)
+}
+```
+
+##### Props
+Component를 호출할 때  props와 같이 호출할 수 있다.
+Props는 Component의 속성을 나타내는 데이터이다.
+위 예제에서는 Props를 활용하여 버튼별 클릭 이벤트 리스너를 다르게 하거나 하는 동작을 수행할 수 있다.
+
+btn.js
+```
+function Btn(props) {
+	return <button
+		onClick={prop.onClick}
+	></button>
+}
+
+export defalut Btn;
+```
+App.js
+```
+import Btn from "./Btn"
+
+function App() {
+	const onClick= () => {
+		console.log("clicked");
+	}
+	return (
+		<div>
+			<Btn onClick={onClick} />
+		</div>
+	)
+}
+```
+사용할 때 HTML태그와 비슷하다고 하여 Component에 props.onClick 에 대한 기능을 작성하지 않고 event listener로 사용하면 안된다. 위 onClick은 event Listener가 아닌 props로 동작하기 때문이다. 물론 btn.js에서의 onClick은 정상적으로 동작한다.
+### render
+React는 Dom에 root를 만들어 직접 render 한다.
+
+index.js
+```
+import App from "./App"
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+	<App />
+);
+```
+
+### State
+기본적으로 상수이며 setState를 사용하여 값을 변경할 수 있다.
+State는 State의 데이터가 변경되었을 때 DOM을 Rerender한다.
+
+App.js
+```
+import { useState } from "react"
+
+function App() {
+	// State
+	cosnt [ counter, setCounter ] = useState(0);
+
+	const onClick= () => {
+		setCounter((prev) => prev + 1)
+	};
+	return (
+		<div>
+			<h2>{counter}</h2>
+			<button onClick={onClick}>click<button/>
+		</div>
+	)
+}
+```
+
+
+### Effect
+
+###### how to import Effect
+```
+import { useEffect } from "react"
+```
+
+##### how to use 'useEffect'
+```
+useEffect(function, [trigger1, trigger2, ...]);
+```
+
+ex)
+```
+const [location, setLocation] = useState(true);
+
+const imHere = () => {
+	console.log("Im here");
+};
+
+useEffect(imHere, [location]);
+```
+or 
+```
+useEffect(() => {
+	console.log("Im here");
+}, [location]);
+```
