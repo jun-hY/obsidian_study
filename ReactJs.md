@@ -110,6 +110,7 @@ function App() {
 	)
 }
 ```
+
 ### Effect
 
 ###### how to import Effect
