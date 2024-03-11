@@ -160,8 +160,25 @@ or
 function Hello() {
 	useEffect(function() {
 		console.log("i Created");
-		return () => console.log("i destroyed");
+		return function() { 
+			console.log("i destroyed");
+		}
 	}, []);
 	return <h1>Hello!</h1>
 }
 ```
+or
+```
+function Hello() {
+	function ByFn() {
+		console.log("i destroyed");
+	}
+	function HiFn() {
+		console.log("i Created");
+		return ByFn;
+	}
+	useEffect(HiFn, []);
+	return <h1>Hello!</h1>
+}
+```
+위 3가지의 타입으로 작성할 수 있다. 본인이 원하는 코드 스타일에 맞게 작성하도록 하자.
