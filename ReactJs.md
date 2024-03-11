@@ -113,6 +113,8 @@ function App() {
 
 ### Effect
 
+Effect는 기본적으로 Component가 생성, 삭제될 때 동작하는 function이다.
+이외의 상황에 다른 object의 변화를 trigger로 하여 동작할 수 있다.
 ###### how to import Effect
 ```
 import { useEffect } from "react"
@@ -138,4 +140,28 @@ or
 useEffect(() => {
 	console.log("Im here");
 }, [location]);
+```
+
+##### Cleanup Function
+Component가 제거될 때 Effect의 동작을 원하면 사용하는 function이다.
+
+How to use Cleanup Function
+```
+function Hello() {
+	useEffect(() => {
+		console.log("i Created");
+		return () => console.log("i destroyed");
+	}, []);
+	return <h1>Hello!</h1>
+}
+```
+or
+```
+function Hello() {
+	useEffect(function() {
+		console.log("i Created");
+		return () => console.log("i destroyed");
+	}, []);
+	return <h1>Hello!</h1>
+}
 ```
