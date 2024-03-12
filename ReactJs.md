@@ -182,3 +182,22 @@ function Hello() {
 }
 ```
 위 3가지의 타입으로 작성할 수 있다. 본인이 원하는 코드 스타일에 맞게 작성하도록 하자.
+
+
+### JS의 API 요청
+
+fetch로 요청
+```
+fetch(`address to get api`)
+	.then((response) => reponse.json())
+	.then((json) => setVariabel(json.)) // ex)json.data.movies etc...
+```
+
+Async로 요청
+```
+const getApi = async () => {
+	const responce = await fetch(`address to get api`);
+	const json = await response.json();
+	setVariable(json...); // ex)json.data.movies etc...
+}
+```
