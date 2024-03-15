@@ -262,6 +262,42 @@ export default Detail;
 ```
 
 ### Parameter
+parameter는 URL에 저장된 인자를 뜻한다.
+
+URL
+```
+http://www.asdf.com/<parameter is here>
+```
+
+App.js
+```
+import {
+	BrowserRouter as Router,
+	Switch,
+	Route
+} from "react-router-dom";
+import Home from "./routes/Home";
+
+function App() {
+	return (
+		<Router>
+			<Switch>
+				<Route path="/WhatEver/:param">
+				</Route>
+			</Switch>
+		</Router>
+	)
+}
+```
+
+WhatEver.js
+```
+import { useParams } from "react-router-dom"
+
+function WhatEver() {
+	const getParam = useParams().param;
+}
+```
 
 
 
