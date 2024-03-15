@@ -113,7 +113,7 @@ function App() {
 
 ### Effect
 
-Effect는 기본적으로 Component가 생성, 삭제될 때 동작하는 function이다.
+Effect는 기본적으로 Component가 생성될 때 동작하는 function이다.
 이외의 상황에 다른 object의 변화를 trigger로 하여 동작할 수 있다.
 ###### how to import Effect
 ```
