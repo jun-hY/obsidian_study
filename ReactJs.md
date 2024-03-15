@@ -201,3 +201,63 @@ const getApi = async () => {
 	setVariable(json...); // ex)json.data.movies etc...
 }
 ```
+
+### Route
+Route는 ReactJs의 대표적인 기능 중 하나로 새로고침없이 화면을 전환할 수 있는 기능이다.
+
+cmd
+```
+npm i react-router-dom
+```
+
+App.js
+```
+import {
+	BrowserRouter as Router,
+	Switch,
+	Route
+} from "react-router-dom";
+import Home from "./routes/Home";
+
+function App() {
+	return (
+		<Router>
+			<Switch>
+				// "/"는 파라매터가 없는 기본 URL상태를 뜻한다.
+				<Route path="/">
+					<Home />
+				</Route>
+			</Switch>
+		</Router>
+	)
+}
+```
+./routes/Home.js
+```
+function Home() {
+	return <div></div>
+}
+
+export default Home;
+```
+
+#### Link
+Route 기능 중 하나로 <a href=""></a> 태그와는 다르게 Route 특징 그대로 새로고침 없이 페이지를 로드한다.
+
+./routes/Home.js
+```
+function Home() {
+	return <Link to="/detail">read Detail</Link>
+}
+
+export default Home;
+```
+./routes/Detail.js
+```
+function Detail() {
+	return <div></div>
+}
+
+export default Detail;
+```
+
