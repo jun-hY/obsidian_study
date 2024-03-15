@@ -73,7 +73,7 @@ function App() {
 	)
 }
 ```
-사용할 때 HTML태그와 비슷하다고 하여 Component에 props.onClick 에 대한 기능을 작성하지 않고 event listener로 사용하면 안된다. 위 onClick은 event Listener가 아닌 props로 동작하기 때문이다. 물론 btn.js에서의 onClick은 정상적으로 동작한다.
+사용할 때 HTML태그와 비슷하다고 하여 Component에 props.onClick 에 대한 기능을 작성하지 않고 event listener로 사용하면 안된다. 위 onClick은 event Listener가 아닌 props로 동작하기 때문이다. 물론 btn.js에서의 onClick은 정상적인 event Listener로 동작한다.
 ### render
 React는 Dom에 root를 만들어 직접 render 한다.
 
