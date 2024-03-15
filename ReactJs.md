@@ -261,3 +261,7 @@ function Detail() {
 export default Detail;
 ```
 
+### Parameter
+
+
+
