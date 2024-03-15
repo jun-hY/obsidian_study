@@ -246,6 +246,8 @@ Route 기능 중 하나로 <a href=""></a> 태그와는 다르게 Route 특징 �
 
 ./routes/Home.js
 ```
+import { Link } from "react-router-dom"
+
 function Home() {
 	return <Link to="/detail">read Detail</Link>
 }
@@ -277,12 +279,17 @@ import {
 	Route
 } from "react-router-dom";
 import Home from "./routes/Home";
+import Home from "./routes/WhatEver";
 
 function App() {
 	return (
 		<Router>
 			<Switch>
-				<Route path="/WhatEver/:param">
+				<Route path="/">
+					<Home />
+				</Route>
+				<Route path="/ever/:param"> // parameter 생성성
+					<WhatEver />
 				</Route>
 			</Switch>
 		</Router>
@@ -290,13 +297,29 @@ function App() {
 }
 ```
 
-WhatEver.js
+./routes/Home.js
+```
+import { Link } from "react-router-dom"
+
+function Home() {
+	const i = 1;
+	//parameter 내보내기
+	return <Link to={`/Ever/${i}`}>read Detail</Link> 
+}
+
+export default Home;
+```
+
+./routes/WhatEver.js
 ```
 import { useParams } from "react-router-dom"
 
 function WhatEver() {
+	//parameter 받기
 	const getParam = useParams().param;
 }
+
+export default WhatEver;
 ```
 
 
