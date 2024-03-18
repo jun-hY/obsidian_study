@@ -44,7 +44,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ReactJs.md",
+                "file": "RUST.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ReactJs.md",
+                "file": "RUST.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ReactJs.md"
+                "file": "RUST.md"
               }
             }
           }
@@ -171,11 +171,11 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "e6ecad21afec9b7f",
+  "active": "2289e0935f3c5e9d",
   "lastOpenFiles": [
+    "ReactJs.md",
     "RUST.md",
     "Study Plan.md",
-    "ReactJs.md",
     "aaaa.md"
   ]
 }
