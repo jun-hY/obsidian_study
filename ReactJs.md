@@ -223,7 +223,7 @@ function App() {
 	return (
 		<Router>
 			<Switch>
-				// "/"는 파라매터가 없는 기본 URL상태를 뜻한다.
+				// "/"는 기본 URL상태를 뜻한다.
 				<Route path="/">
 					<Home />
 				</Route>
@@ -242,7 +242,7 @@ export default Home;
 ```
 
 #### Link
-Route 기능 중 하나로 <a href=""></a> 태그와는 다르게 Route 특징 그대로 새로고침 없이 페이지를 로드한다.
+Route 기능 중 하나로 "a" 태그와는 다르게 Route 특징 그대로 새로고침 없이 페이지를 로드한다.
 
 ./routes/Home.js
 ```
@@ -288,7 +288,7 @@ function App() {
 				<Route path="/">
 					<Home />
 				</Route>
-				<Route path="/ever/:param"> // parameter 생성성
+				<Route path="/ever/:param"> // parameter 생성
 					<WhatEver />
 				</Route>
 			</Switch>
