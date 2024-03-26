@@ -23,7 +23,7 @@ React는 Component를 작성하여 UI의 재사용을 쉽게 한다.
 간단히 사용자 함수형태로 정의된 html 뭉치라 보면 되겠다.
 
 Btn.js
-```
+```js
 function Btn() {
 	return <button></button>
 }
@@ -31,7 +31,7 @@ function Btn() {
 export defalut Btn;
 ```
 App.js
-```
+```js
 import Btn from "./Btn.js"
 
 function App() {
@@ -49,7 +49,7 @@ Props는 Component의 속성을 나타내는 데이터이다.
 위 예제에서는 Props를 활용하여 버튼별 클릭 이벤트 리스너를 다르게 하거나 하는 동작을 수행할 수 있다.
 
 btn.js
-```
+```js
 function Btn(props) {
 	return <button
 		onClick={prop.onClick}
@@ -59,7 +59,7 @@ function Btn(props) {
 export defalut Btn;
 ```
 App.js
-```
+```js
 import Btn from "./Btn"
 
 function App() {
@@ -78,7 +78,7 @@ function App() {
 React는 Dom에 root를 만들어 직접 render 한다.
 
 index.js
-```
+```js
 import App from "./App"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -92,7 +92,7 @@ root.render(
 State는 State의 데이터가 변경되었을 때 DOM을 Rerender한다.
 
 App.js
-```
+```js
 import { useState } from "react"
 
 function App() {
@@ -116,17 +116,17 @@ function App() {
 Effect는 기본적으로 Component가 생성될 때 동작하는 function이다.
 이외의 상황에 다른 object의 변화를 trigger로 하여 동작할 수 있다.
 ###### how to import Effect
-```
+```js
 import { useEffect } from "react"
 ```
 
 ##### how to use 'useEffect'
-```
+```js
 useEffect(function, [trigger1, trigger2, ...]);
 ```
 
 ex)
-```
+```js
 const [location, setLocation] = useState(true);
 
 const imHere = () => {
@@ -136,7 +136,7 @@ const imHere = () => {
 useEffect(imHere, [location]);
 ```
 or 
-```
+```js
 useEffect(() => {
 	console.log("Im here");
 }, [location]);
@@ -146,7 +146,7 @@ useEffect(() => {
 Component가 제거될 때 Effect의 동작을 원하면 사용하는 function이다.
 
 How to use Cleanup Function
-```
+```js
 function Hello() {
 	useEffect(() => {
 		console.log("i Created");
@@ -156,7 +156,7 @@ function Hello() {
 }
 ```
 or
-```
+```js
 function Hello() {
 	useEffect(function() {
 		console.log("i Created");
@@ -168,7 +168,7 @@ function Hello() {
 }
 ```
 or
-```
+```js
 function Hello() {
 	function ByFn() {
 		console.log("i destroyed");
@@ -187,14 +187,14 @@ function Hello() {
 ### JS의 API 요청
 
 fetch로 요청
-```
+```js
 fetch(`address to get api`)
 	.then((response) => reponse.json())
 	.then((json) => setVariabel(json.)) // ex)json.data.movies etc...
 ```
 
 Async로 요청
-```
+```js
 const getApi = async () => {
 	const responce = await fetch(`address to get api`);
 	const json = await response.json();
@@ -211,7 +211,7 @@ npm i react-router-dom
 ```
 
 App.js
-```
+```js
 import {
 	BrowserRouter as Router,
 	Switch,
@@ -233,7 +233,7 @@ function App() {
 }
 ```
 ./routes/Home.js
-```
+```js
 function Home() {
 	return <div></div>
 }
@@ -245,7 +245,7 @@ export default Home;
 Route 기능 중 하나로 "a" 태그와는 다르게 Route 특징 그대로 새로고침 없이 페이지를 로드한다.
 
 ./routes/Home.js
-```
+```js
 import { Link } from "react-router-dom"
 
 function Home() {
@@ -255,7 +255,7 @@ function Home() {
 export default Home;
 ```
 ./routes/Detail.js
-```
+```js
 function Detail() {
 	return <div></div>
 }
@@ -272,7 +272,7 @@ http://www.asdf.com/<parameter is here>
 ```
 
 App.js
-```
+```js
 import {
 	BrowserRouter as Router,
 	Switch,
@@ -298,7 +298,7 @@ function App() {
 ```
 
 ./routes/Home.js
-```
+```js
 import { Link } from "react-router-dom"
 
 function Home() {
@@ -311,7 +311,7 @@ export default Home;
 ```
 
 ./routes/WhatEver.js
-```
+```js
 import { useParams } from "react-router-dom"
 
 function WhatEver() {
