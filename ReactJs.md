@@ -20,7 +20,7 @@ btn.js에 css를 적용 시킬때 btn.module.css를 작성해 btn.js에 import
 
 ### Component
 React는 Component를 작성하여 UI의 재사용을 쉽게 한다.
-간단히 사용자 함수형태로 정의된 html코드 뭉치라 보면 되겠다.
+간단히 사용자 함수형태로 정의된 html 뭉치라 보면 되겠다.
 
 Btn.js
 ```
