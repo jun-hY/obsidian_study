@@ -56,3 +56,18 @@ fn main() {
 	let f:bool = false; //with explicit type annotation
 }
 ```
+
+##### 문자 타입
+Rust의 ```char``` 타입은 Unicode Scalar를 표현한다. ( C는 ASCII다. )
+```rust
+fn main() {
+	let c = 'z';
+	let z = 'ℤ';
+	let heart_eyed_cat = '😻';
+}
+```
+
+
+## 복합타입
+
+##### 튜플(tuple)
