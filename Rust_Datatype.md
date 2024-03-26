@@ -52,6 +52,7 @@ fn main() {
 ```true, false```의 값을 갖는 타입.
 ```rust
 fn main() {
-	
+	let t = true;
+	let f:bool = false; //with explicit type annotation
 }
 ```
