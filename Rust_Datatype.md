@@ -71,3 +71,28 @@ fn main() {
 ## 복합타입
 
 ##### 튜플(tuple)
+다양한 타입의 숫자를 집합시켜 하나의 복합 타입으로 만드는 일반적인 방법
+```rust
+fn main() {
+	let tup: (i32, f64, u8) = (500, 6.4, 1);
+}
+```
+
+```rust
+fn main() {
+	let tup = (500, 6.4, 1);
+	let (x, y, z) = tup;
+	println!("The value of y is: {}", y);
+}
+```
+위와 같은 방법으로 튜플에 각 변수를 매칭시켜 튜플을 해체할 수 있다.
+( 구조해체 )
+
+```rust
+fn main() { 
+	let x: (i32, f64, u8) = (500, 6.4, 1);
+	let five_hundred = x.0;
+	let six_point_four = x.1;
+	let one = x.2;
+}
+```
