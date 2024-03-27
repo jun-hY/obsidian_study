@@ -83,6 +83,7 @@ fn main() {
 }
 
 fn another_function(x: i32) {
-	println!("")
+	println!("the value is {}", x);
 }
 ```
+
