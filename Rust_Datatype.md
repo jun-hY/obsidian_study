@@ -96,3 +96,5 @@ fn main() {
 	let one = x.2;
 }
 ```
+
+##### 배열(Array)
