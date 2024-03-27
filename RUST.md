@@ -88,3 +88,34 @@ fn another_function(x: i32) { // 변수이름: 타입
 }
 ```
 
+##### 표현식
+
+구문과 다르게 결과값을 산출함(return)
+	구문 : 어떤 명령의 나열
+
+```rust
+fn main() {
+	let x = 5; // 구문
+
+	let y = {
+		let x = 3;
+		x + 1 // 결과값 return
+	}; // 표현식
+
+	println!("the value of y is: {}", y); // 4출력
+}
+```
+
+##### 함수의 반환값
+
+```rust
+fn five() -> i32 { // -> 리턴 값의 타입
+	5 // rust는 리턴값을 ;(세미콜론)으로 마무리하지 않음
+}
+
+fn main() {
+	let x = five();
+
+	println!("the value of x is: {}", x); // 5 출력
+}
+```
