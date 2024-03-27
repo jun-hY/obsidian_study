@@ -78,11 +78,12 @@ fn another_function() {
 ```
 
 ```rust
+// 함수 매개변수 전달법
 fn main() {
 	another_function(5);
 }
 
-fn another_function(x: i32) {
+fn another_function(x: i32) { // 변수이름: 타입
 	println!("the value is {}", x);
 }
 ```
