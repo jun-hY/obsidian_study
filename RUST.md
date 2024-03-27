@@ -61,3 +61,28 @@ mut 은 같은 타입만 가능하다.
 
 ### [[Rust_Datatype]]
 
+### 함수(Function)
+
+rust에서 함수는 뱀형태(Snake Case)로 작명한다.
+
+```rust
+fn main() {
+	println!("Hello, World!");
+
+	another_function();
+}
+
+fn another_function() {
+	println!("Another function");
+}
+```
+
+```rust
+fn main() {
+	another_function(5);
+}
+
+fn another_function(x: i32) {
+	println!("")
+}
+```

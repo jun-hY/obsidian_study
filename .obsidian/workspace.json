@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "5783a5734ad8cae5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Rust_Datatype.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rust_Datatype.md",
+                "file": "RUST.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rust_Datatype.md",
+                "file": "RUST.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rust_Datatype.md"
+                "file": "RUST.md"
               }
             }
           }
@@ -159,11 +146,11 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "5783a5734ad8cae5",
+  "active": "e6ecad21afec9b7f",
   "lastOpenFiles": [
+    "Rust_Datatype.md",
     "RUST.md",
     "Study Plan.md",
-    "Rust_Datatype.md",
     "ReactJs.md",
     "aaaa.md"
   ]
