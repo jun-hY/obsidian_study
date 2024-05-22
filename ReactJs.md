@@ -279,7 +279,7 @@ import {
 	Route
 } from "react-router-dom";
 import Home from "./routes/Home";
-import Home from "./routes/WhatEver";
+import WhatEver from "./routes/WhatEver";
 
 function App() {
 	return (
