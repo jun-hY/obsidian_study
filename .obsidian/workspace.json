@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RUST.md",
+                "file": "Rust_Datatype.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "RUST.md",
+                "file": "Rust_Datatype.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "RUST.md",
+                "file": "Rust_Datatype.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "RUST.md"
+                "file": "Rust_Datatype.md"
               }
             }
           }
@@ -148,8 +148,8 @@
   },
   "active": "e6ecad21afec9b7f",
   "lastOpenFiles": [
-    "ReactJs.md",
     "RUST.md",
+    "ReactJs.md",
     "Rust_Datatype.md",
     "Study Plan.md",
     "aaaa.md"
