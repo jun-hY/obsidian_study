@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rust_Datatype.md",
+                "file": "RUST.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3531308d84e8d14b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Next.Js.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rust_Datatype.md",
+                "file": "Next.Js.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rust_Datatype.md",
+                "file": "Next.Js.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rust_Datatype.md"
+                "file": "Next.Js.md"
               }
             }
           }
@@ -146,10 +159,11 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "e6ecad21afec9b7f",
+  "active": "3531308d84e8d14b",
   "lastOpenFiles": [
-    "RUST.md",
     "ReactJs.md",
+    "RUST.md",
+    "Next.Js.md",
     "Rust_Datatype.md",
     "Study Plan.md",
     "aaaa.md"
