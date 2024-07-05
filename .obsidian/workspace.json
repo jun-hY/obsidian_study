@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "21f65344b1e61a17",
+        "id": "2a818b76f2d89205",
         "type": "tabs",
         "children": [
           {
-            "id": "6ea60ea566ca26bc",
+            "id": "b3d58c5ead6243a4",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "C란.md",
+                "file": "Hello, World!.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "C란.md",
+                "file": "Hello, World!.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C란.md"
+                "file": "Hello, World!.md"
               }
             }
           }
@@ -180,12 +180,44 @@
         "height": 855,
         "maximize": false,
         "zoom": 0
+      },
+      {
+        "id": "cbe22b94445b753c",
+        "type": "window",
+        "children": [
+          {
+            "id": "480b4d4737c77f6c",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "6ea60ea566ca26bc",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Hello, World!.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 1178,
+        "y": 94,
+        "width": 1007,
+        "height": 855,
+        "maximize": false,
+        "zoom": 0
       }
     ]
   },
-  "active": "c8b96a0298d97de6",
+  "active": "6ea60ea566ca26bc",
   "lastOpenFiles": [
     "C언어 강의 목차.md",
+    "Hello, World!.md",
     "C란.md",
     "RUST.md",
     "Rust_Datatype.md",
