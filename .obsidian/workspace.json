@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "2a818b76f2d89205",
+        "id": "608d594c7898179e",
         "type": "tabs",
         "children": [
           {
-            "id": "b3d58c5ead6243a4",
+            "id": "4be25fdd031a6ed6",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "C언어 강의 목차.md",
+                "file": "변수.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "C언어 강의 목차.md",
+                "file": "변수.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C언어 강의 목차.md"
+                "file": "변수.md"
               }
             }
           }
@@ -200,8 +200,21 @@
                     "source": false
                   }
                 }
+              },
+              {
+                "id": "b3d58c5ead6243a4",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "변수.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
               }
-            ]
+            ],
+            "currentTab": 1
           }
         ],
         "direction": "vertical",
@@ -216,8 +229,9 @@
   },
   "active": "b3d58c5ead6243a4",
   "lastOpenFiles": [
-    "Hello, World!.md",
     "C언어 강의 목차.md",
+    "변수.md",
+    "Hello, World!.md",
     "C란.md",
     "RUST.md",
     "Rust_Datatype.md",
