@@ -8,40 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e6ecad21afec9b7f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "RUST.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3531308d84e8d14b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Next.Js.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a2e636da7e53348a",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.6.5"
-              }
-            }
-          },
-          {
             "id": "c8b96a0298d97de6",
             "type": "leaf",
             "state": {
@@ -52,9 +18,16 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "6ea60ea566ca26bc",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -183,11 +156,12 @@
   },
   "active": "c8b96a0298d97de6",
   "lastOpenFiles": [
+    "C란.md",
     "C언어 강의 목차.md",
-    "ReactJs.md",
     "RUST.md",
-    "Next.Js.md",
     "Rust_Datatype.md",
+    "ReactJs.md",
+    "Next.Js.md",
     "Study Plan.md",
     "aaaa.md"
   ]
