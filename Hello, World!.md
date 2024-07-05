@@ -29,3 +29,14 @@ void main()
 }
 ```
 
+```c
+#include <stdio.h>
+
+void main()
+{
+    char str[10] = "";   // 문자열 변수 선언
+    scanf("%s", str);    // 문자열 입력
+    printf("%s\n", str); // 출력하는 함수
+}
+```
+
