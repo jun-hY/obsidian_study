@@ -199,9 +199,9 @@
           }
         ],
         "direction": "vertical",
-        "x": 105,
-        "y": 81,
-        "width": 807,
+        "x": 871,
+        "y": 82,
+        "width": 1189,
         "height": 855,
         "maximize": false,
         "zoom": 0
@@ -210,10 +210,10 @@
   },
   "active": "9e15a9f8d4931c57",
   "lastOpenFiles": [
-    "C언어 강의 목차.md",
-    "중첩 반복문.md",
     "배열.md",
     "반복문.md",
+    "중첩 반복문.md",
+    "C언어 강의 목차.md",
     "변수.md",
     "C란.md",
     "C언어 1일차.zip",
