@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "146e2cf2cb6010aa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "구조체를 이용한 ATM구현.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "C언어 강의 목차.md",
+                "file": "구조체를 이용한 ATM구현.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "C언어 강의 목차.md",
+                "file": "구조체를 이용한 ATM구현.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C언어 강의 목차.md"
+                "file": "구조체를 이용한 ATM구현.md"
               }
             }
           }
@@ -146,63 +159,14 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "floating": {
-    "id": "21f460e084db1221",
-    "type": "floating",
-    "children": [
-      {
-        "id": "04deeb054766b611",
-        "type": "window",
-        "children": [
-          {
-            "id": "bae760cb53b1054c",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "05faffca2b82a28d",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "반복문.md",
-                    "mode": "source",
-                    "source": false
-                  }
-                }
-              },
-              {
-                "id": "a6bfc12cf2008cc2",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "배열.md",
-                    "mode": "source",
-                    "source": false
-                  }
-                }
-              }
-            ],
-            "currentTab": 1
-          }
-        ],
-        "direction": "vertical",
-        "x": 1250,
-        "y": 62,
-        "width": 1189,
-        "height": 855,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "4732ea20715bf898",
+  "active": "146e2cf2cb6010aa",
   "lastOpenFiles": [
+    "C언어 강의 목차.md",
+    "구조체를 이용한 ATM구현.md",
     "배열.md",
+    "반복문.md",
     "중첩 반복문.md",
     "2일차.zip",
-    "반복문.md",
-    "C언어 강의 목차.md",
     "변수.md",
     "C란.md",
     "C언어 1일차.zip",
