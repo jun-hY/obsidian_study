@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "배열.md",
+                "file": "C언어 강의 목차.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "배열.md",
+                "file": "C언어 강의 목차.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "배열.md"
+                "file": "C언어 강의 목차.md"
               }
             }
           }
@@ -196,11 +196,11 @@
       }
     ]
   },
-  "active": "a6bfc12cf2008cc2",
+  "active": "4732ea20715bf898",
   "lastOpenFiles": [
+    "배열.md",
     "중첩 반복문.md",
     "2일차.zip",
-    "배열.md",
     "반복문.md",
     "C언어 강의 목차.md",
     "변수.md",
