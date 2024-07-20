@@ -23,7 +23,7 @@ cd <your_project_name>
 Rust의 변수는 기본적으로 불변이다. 가변이 가능한 변수로 만들기 위해서 변수 선언 뒤 옵션을 붙인다.
 
 ```Rust
-let i = 1; // 상수
+let i = 1; // 불변 변수
 let mut a = 1; // 가변 변수
 ```
 
