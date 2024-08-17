@@ -11,8 +11,12 @@
             "id": "a96b062cccb4fa17",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "중첩 반복문.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "중첩 반복문.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "중첩 반복문.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "중첩 반복문.md"
+              }
             }
           }
         ]
@@ -141,6 +149,8 @@
   "active": "a96b062cccb4fa17",
   "lastOpenFiles": [
     "C언어 강의 목차.md",
+    "C란.md",
+    "C언어 2차 강의.md",
     "ReactJs.md",
     "구조체를 이용한 숫자야구.md",
     "배열.md",
@@ -148,7 +158,6 @@
     "중첩 반복문.md",
     "2일차.zip",
     "변수.md",
-    "C란.md",
     "C언어 1일차.zip",
     "조건문.md",
     "Hello, World!.md",
