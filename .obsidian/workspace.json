@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f2c1a45e9acd3707",
+        "id": "fa4cecc749d6c948",
         "type": "tabs",
         "children": [
           {
-            "id": "a96b062cccb4fa17",
+            "id": "4ebbd545e897b473",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "34d507a08fbd3e5c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "20241004_2237046_정준혁 _죽간의_내용_Report.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -78,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -99,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "20241004_2237046_정준혁 _죽간의_내용_Report.md",
+                "file": "ReactJs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "20241004_2237046_정준혁 _죽간의_내용_Report.md",
+                "file": "ReactJs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "20241004_2237046_정준혁 _죽간의_내용_Report.md"
+                "file": "ReactJs.md"
               }
             }
           }
@@ -160,9 +146,10 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "34d507a08fbd3e5c",
+  "active": "4ebbd545e897b473",
   "lastOpenFiles": [
     "ReactJs.md",
+    "포인터.md",
     "20241004_2237046_정준혁 _죽간의_내용_Report.md",
     "스크린샷 2024-10-04 141854.png",
     "반복문.md",
@@ -170,7 +157,6 @@
     "사용자 함수.md",
     "조건문.md",
     "중첩 반복문.md",
-    "포인터.md",
     "C언어 강의 목차.md",
     "C란.md",
     "C언어 2차 강의.md",
