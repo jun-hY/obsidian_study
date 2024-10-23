@@ -57,8 +57,8 @@ Open 퀴즈 테스트 과제 #1 세부 내용
     그룹 이름 : 비밀번호 : 그룹 ID
 
 12. 사용자 그룹 명령에 대하여 설명하세요. 
-	1) useradd
-	2) usermod
+	1) useradd - useradd newuser -> newuser라는 사용자를 추가한다.
+	2) usermod - usermod -g root newuser
 	3) userdel
 	4) chage
 	5) groupadd
