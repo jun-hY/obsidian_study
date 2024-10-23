@@ -65,8 +65,10 @@ Open 퀴즈 테스트 과제 #1 세부 내용
 	6) groupmod - groupmod -n mygroup newgroup -> newgroup을 mygroup으로 그룹명을 변경한다.
 
 13. chmod 명령어 기능, 읽기/쓰기/실행 권한 설정에 대하여 설명하세요. 
-    chmod는 파일의 권한을 설정하는 명령어이다.
-    `chmod [권한설정] [파일이름]`으로 사용하며 
+    chmod는 파일의 허가권을 설정하는 명령어이다. root와 파일을 소유한 사용자만 실행 가능하다.
+    `chmod [권한설정] [파일이름]`으로 사용하며 권한 설정은 
+	`소유자 | 그룹 | 기타 사용자` 순으로 입력된다. 각 사용자 별로
+	`read write excute` 순으로 입력되며  
 
 14. chown, charg 명령어에 대하여 설명하세요. 
 
