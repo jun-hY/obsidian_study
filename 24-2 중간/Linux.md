@@ -116,9 +116,12 @@ gpgcheck=0
 
 22. nmtui, systemctl 명령어에 대하여 설명하세요.
     nmtui - Network Manager Text User Interface. 자동 IP 주소 또는 고정 IP 주소 사용 결정, IP 주소, 서브넷 마스크, 게이트웨이 정보 입력 등 네트워크 세팅을 도와주는 명령어
-    systemctl - 시스템 
+    systemctl - 서비스 데몬을 조작하기 위한 명령어.
 
 23. ifconfig, nslookup, ping 명령어에 대하여 설명하세요. 
+    ifconfig - 네트워크 장치를 작동시키거나 네트워크 장치의 정보를 확인하는 명령어
+    nslookup - DNS 서버의 작동을 테스트하는 명령어이다.
+    ping 주소 - 해당 주소가 네트워크상에서 응답하는지 테스트하는 명령어.
 
 24. 보안을 위한 SELinux에 대하여 설명하세요. 
 
