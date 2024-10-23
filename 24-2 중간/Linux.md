@@ -98,9 +98,16 @@ Open 퀴즈 테스트 과제 #1 세부 내용
     7. 패키지 저장소에서 설치할 패키지 파일을 다운로드해서 자동 설치
 
 19. dnf 명령으로 DVD를 마운트하여 rocky linux 9.0을 설치할 경우에,DVD의 `rocky linux 9.0 **.iso` 화일의 저장소에 dnf install로 설치하는 패키지를 저장소에서 다운로드 받지 못하는 경우에 dnf install 을 위하여 조치방법에 대하여 설명하세요. 
-    /etc/yum.repos.d 디렉토리의 dvd.repo 파일을 열어 network-crb 부분의 baseurl 부분에 
+    /etc/yum.repos.d 디렉토리의 dvd.repo 파일을 열어 파일 하단에 아래와 같이 추가한다.
+```repo
+[network-crb]
+name= Rocky Linux Network CRB
+baseurl=http://dl.rockylinux.org/vault/rocky/9.0/CRB/x86_64/os/
+gpgcheck=0
+```
 
 20. TCP/IP 개념에 대하여 설명하세요. 
+    
 
 21. 브로드캐스트,  DNS 개념에 대하여 설명하세요. 
 
