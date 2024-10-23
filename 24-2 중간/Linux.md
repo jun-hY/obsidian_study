@@ -58,13 +58,15 @@ Open 퀴즈 테스트 과제 #1 세부 내용
 
 12. 사용자 그룹 명령에 대하여 설명하세요. 
 	1) useradd - useradd newuser -> newuser라는 사용자를 추가한다.
-	2) usermod - usermod -g root newuser
-	3) userdel
-	4) chage
-	5) groupadd
-	6) groupmod
+	2) usermod - usermod -g root newuser -> root 그룹에 newuser를 추가한다.
+	3) userdel - userdel - newuser -> newuser 사용자를 삭제한다.
+	4) chage - chage -m 2 newuser -> newuser의 비밀번호를 최소 2일 동안은 사용하도록 한다.
+	5) groupadd - groupadd newgroup -> newgroup이라는 그룹을 생성한다.
+	6) groupmod - groupmod -n mygroup newgroup -> newgroup을 mygroup으로 그룹명을 변경한다.
 
 13. chmod 명령어 기능, 읽기/쓰기/실행 권한 설정에 대하여 설명하세요. 
+    chmod는 파일의 권한을 설정하는 명령어이다.
+    `chmod [권한설정] [파일이름]`으로 사용하며 
 
 14. chown, charg 명령어에 대하여 설명하세요. 
 
