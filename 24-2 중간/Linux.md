@@ -89,6 +89,8 @@ Open 퀴즈 테스트 과제 #1 세부 내용
     `dnf check-update` 업데이트 가능한 패키지의 목록을 출력한다.
 
 18. dnf 작동 방식 설치파일의 동작 절차를 설명하시오
+    1. 명령어 입력
+    2. /etc/yum
 
 19. dnf 명령으로 DVD를 마운트하여 rocky linux 9.0을 설치할 경우에,
   DVD의 rocky linux 9.0 **.iso 화일의 저장소에 dnf install로 설치하는 패키지를 저장소에서 다운로드 받지 못하는 경우에 dnf install 을 위하여 조치방법에 대하여 설명하세요. 
