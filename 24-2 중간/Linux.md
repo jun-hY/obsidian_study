@@ -116,6 +116,7 @@ gpgcheck=0
 
 22. nmtui, systemctl 명령어에 대하여 설명하세요.
     nmtui - Network Manager Text User Interface. 자동 IP 주소 또는 고정 IP 주소 사용 결정, IP 주소, 서브넷 마스크, 게이트웨이 정보 입력 등 네트워크 세팅을 도와주는 명령어
+    systemctl - 
 
 23. ifconfig, nslookup, ping 명령어에 대하여 설명하세요. 
 
