@@ -25,8 +25,10 @@ Open 퀴즈 테스트 과제 #1 세부 내용
    dnf -y install firewall-config
 
 6. 가상 콘솔 3개를 멀티로 사용하는 방법에 대하여 설명하세요. 
-
+   x윈도우 기능을 사용하여 ctrl + alt + F3, ctrl + alt + F4로 가상 콘솔을 3개로 늘릴 수 있다.
+   
 7. 런 레벨에 대하여 설명하세요. 
+   
 
 8. mount, umount 명령어에 대하여 설명하세요. 
 
