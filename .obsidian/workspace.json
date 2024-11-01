@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "24-2 중간/Linux.md",
+                "file": "변수.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Linux"
+              "title": "변수"
             }
           }
         ]
@@ -164,8 +164,8 @@
   },
   "active": "e4d6a144d2af7e59",
   "lastOpenFiles": [
-    "24-2 중간/AI.md",
     "24-2 중간/Linux.md",
+    "24-2 중간/AI.md",
     "24-2 중간/Database.md",
     "24-2 중간/웹 프로그래밍.md",
     "ReactJs.md",
