@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "변수.md",
+                "file": "구조체.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "변수"
+              "title": "구조체"
             }
           }
         ]
@@ -164,12 +164,12 @@
   },
   "active": "e4d6a144d2af7e59",
   "lastOpenFiles": [
+    "변수.md",
     "24-2 중간/Linux.md",
     "24-2 중간/AI.md",
     "24-2 중간/Database.md",
     "24-2 중간/웹 프로그래밍.md",
     "ReactJs.md",
-    "변수.md",
     "배열.md",
     "24-2 중간",
     "포인터.md",
