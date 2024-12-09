@@ -1,30 +1,28 @@
-**1. What statement describes the function of the Address Resolution Protocol?**
+**1. 주소 해결 프로토콜의 기능을 설명하는 문장은 무엇입니까?**  
+  
+- ARP는 로컬 네트워크에서 호스트의 IP 주소를 검색하는 데 사용됩니다.  
+- ARP는 로컬 네트워크의 모든 호스트의 MAC 주소를 검색하는 데 사용됩니다.  ✅
+- ARP는 다른 네트워크에 있는 모든 호스트의 MAC 주소를 검색하는 데 사용됩니다.  
+- ARP는 다른 네트워크에서 호스트의 IP 주소를 검색하는 데 사용됩니다.
 
-- ARP is used to discover the IP address of any host on the local network.
-- ARP is used to discover the MAC address of any host on the local network.
-- ARP is used to discover the MAC address of any host on a different network.
-- ARP is used to discover the IP address of any host on a different network.
 
-**Explanation:** When a PC wants to send data on the network, it always knows the IP address of the destination. However, it also needs to discover the MAC address of the destination. ARP is the protocol that is used to discover the MAC address of a host that belongs to the same network.
-
-**2. Refer to the exhibit. What does R1 use as the MAC address of the destination when constructing the frame that will go from R1 to Server B?**  
+**2. 전시를 참조하세요. R1에서 서버 B로 이동할 프레임을 구성할 때 R1은 목적지의 MAC 주소로 무엇을 사용하나요?**  
 ![Networking Devices and Initial Configuration Module 7 - 9 Checkpoint Exam Q2](https://itexamanswers.net/wp-content/uploads/2015/05/i215038v1n1_215038.jpg)
 
-- If the destination MAC address that corresponds to the IPv4 address is not in the ARP cache, R1 sends an ARP request.
-- The packet is encapsulated into a PPP frame, and R1 adds the PPP destination address to the frame.
-- R1 leaves the field blank and forwards the data to the PC.
-- R1 uses the destination MAC address of S1.
+- IPv4 주소에 해당하는 대상 MAC 주소가 ARP 캐시에 없는 경우 R1은 ARP 요청을 보냅니다.  ✅
+- 패킷은 PPP 프레임에 캡슐화되고 R1은 프레임에 PPP 목적지 주소를 추가합니다.  
+- R1은 필드를 비워두고 데이터를 PC로 전달합니다.  
+- R1은 S1의 목적지 MAC 주소를 사용합니다.
 
-**Explanation:** Communication inside a local network uses Address Resolution Protocol to obtain a MAC address from a known IPv4 address. A MAC address is needed to construct the frame in which the packet is encapsulated.
 
-**3. What is the protocol that is used to discover a physical address from a known logical address and what message type does it use?**
+**3. 알려진 논리 주소에서 물리적 주소를 검색하는 데 사용되는 프로토콜은 무엇이며 어떤 메시지 유형을 사용하나요?**
 
 - PING, broadcast
 - DNS, unicast
 - DNS, broadcast
 - PING, multicast
 - ARP, multicast
-- ARP, broadcast
+- ARP, broadcast ✅
 
 **Explanation:** An ARP request is broadcast to all devices on a LAN segment which seek the MAC address for a known IP address. Pings are used to verify connectivity between two devices, and DNS resolves URLs to IP addresses.
 
@@ -32,7 +30,7 @@
 
 - a multicast to any Layer 3 devices that are connected to the local network
 - an RFI (Request for Information) message
-- an ARP request
+- an ARP request ✅
 - an ICMP ping
 
 **Explanation:** An ARP request is used to determine any unknown MAC address when the destination IP address is known. In an IPv4-based network, this request is sent as a Layer 2 broadcast.
@@ -42,7 +40,7 @@
 - the IP address of the default gateway
 - the MAC address of the destination host
 - the network domain of the destination host
-- the MAC address of the default gateway
+- the MAC address of the default gateway ✅
 
 **Explanation:** A frame is encapsulated with source and destination MAC addresses. The source device will not know the MAC address of the remote host. An ARP request will be sent by the source and will be responded to by the router. The router will respond with the MAC address of its interface, the one which is connected to the same network as the source.
 
@@ -54,7 +52,7 @@ Networking Devices and Initial Configuration Module 7 – 9 Checkpoint Exam Q6
 
 - 192.168.1.2
 - 192.168.1.254
-- 192.168.0.1
+- 192.168.0.1 ✅
 - 192.168.0.3
 - 192.168.0.2
 - 192.168.0.254
@@ -64,10 +62,10 @@ Networking Devices and Initial Configuration Module 7 – 9 Checkpoint Exam Q6
 
 **7. What are two problems that can be caused by a large number of ARP request and reply messages? (Choose two.)**
 
-- The ARP request is sent as a broadcast, and will flood the entire subnet.
+- The ARP request is sent as a broadcast, and will flood the entire subnet. ✅
 - The network may become overloaded because ARP reply messages have a very large payload due to the 48-bit MAC address and 32-bit IP address that they contain.
 - Switches become overloaded because they concentrate all the traffic from the attached subnets.
-- All ARP request messages must be processed by all nodes on the local network.
+- All ARP request messages must be processed by all nodes on the local network. ✅
 - A large number of ARP request and reply messages may slow down the switching process, leading the switch to make many changes in its MAC table.
 
 **Explanation:** ARP requests are sent as broadcasts:  
@@ -80,9 +78,9 @@ A switch does not change its MAC table based on ARP request or reply messages. T
 
 - The network connection is down.
 - The default gateway address is misconfigured on the workstation.
-- The DNS server address is misconfigured on the workstation.
+- The DNS server address is misconfigured on the workstation. ✅
 - The web server is misconfigured.
-- The web server information is misconfigured on the DNS server.
+- The web server information is misconfigured on the DNS server. ✅
 
 **Explanation:** The fact that the web server can be accessed by its IP address indicates that the web server is working and there is connectivity between the workstation and the web server. However, the web server domain name is not resolving correctly to its IP address. This could be caused by a misconfiguration of the DNS server IP address on the workstation or the wrong entry of the web server in the DNS server.
 
@@ -94,7 +92,7 @@ A switch does not change its MAC table based on ARP request or reply messages. T
 
 - DHCPREQUEST
 - DHCPACK
-- DHCPDISCOVER
+- DHCPDISCOVER ✅
 - DHCPOFFER
 
 **Explanation:** A client will first send the DHCPDISCOVER broadcast message to find DHCPv4 servers on the network. This message will have the limited broadcast address, 255.255.255.255, as the destination address. The client IPv4 address, the default gateway address, and subnet fields will all be 0.0.0.0 because these have not yet been configured on the client. When the DHCPv4 server receives a DHCPDISCOVER message, it reserves an available IPv4 address to lease to the client and sends the unicast DHCPOFFER message to the requesting client. When the client receives the DHCPOFFER from the server, it sends back a DHCPREQUEST broadcast message. On receiving the DHCPREQUEST message, the server replies with a unicast DHCPACK message.
@@ -103,9 +101,9 @@ A switch does not change its MAC table based on ARP request or reply messages. T
 
 - nbtstat cisco.com
 - net cisco.com
-- ping cisco.com
+- ping cisco.com ✅
 - ipconfig /flushdns
-- nslookup cisco.com
+- nslookup cisco.com ✅
 
 **Explanation:** The ping command tests the connection between two hosts. When ping uses a host domain name to test the connection, the resolver on the PC will first perform the name resolution to query the DNS server for the IP address of the host. If the ping command is unable to resolve the domain name to an IP address, an error will result.
 
@@ -114,18 +112,18 @@ Nslookup is a tool for testing and troubleshooting DNS servers.
 **11. Which three statements describe a DHCP Discover message? (Choose three.)**
 
 - Only the DHCP server receives the message.
-- The message comes from a client seeking an IP address.
+- The message comes from a client seeking an IP address. ✅
 - The source MAC address is 48 ones (FF-FF-FF-FF-FF-FF).
 - The message comes from a server offering an IP address.
-- All hosts receive the message, but only a DHCP server replies.
-- The destination IP address is 255.255.255.255.
+- All hosts receive the message, but only a DHCP server replies. ✅
+- The destination IP address is 255.255.255.255. ✅
 
 **Explanation:** When a host configured to use DHCP powers up on a network it sends a DHCPDISCOVER message. FF-FF-FF-FF-FF-FF is the L2 broadcast address. A DHCP server replies with a unicast DHCPOFFER message back to the host.
 
 **12. What IPv4-related DNS record type is used by a DNS server in response to a host requesting for a web server address via the URL?**
 
 - NS record
-- A record
+- A record ✅
 - MX record
 - AAAA record
 
@@ -135,8 +133,8 @@ Nslookup is a tool for testing and troubleshooting DNS servers.
 
 - retrieving email messages
 - providing IP addresses to local hosts
-- mapping name-to-IP addresses for internal hosts
-- forwarding name resolution requests between servers
+- mapping name-to-IP addresses for internal hosts ✅
+- forwarding name resolution requests between servers ✅
 - allowing data transfer between two network devices
 
 **Explanation:** Two important functions of DNS are to (1) provide IP addresses for domain names such as www.cisco.com, and (2) forward requests that cannot be resolved to other servers in order to provide domain name to IP address translation. DHCP provides IP addressing information to local devices. A file transfer protocol such as FTP, SFTP, or TFTP provides file sharing services. IMAP or POP can be used to retrieve an email message from a server.
@@ -144,7 +142,7 @@ Nslookup is a tool for testing and troubleshooting DNS servers.
 **14. A DHCP configured PC boots up. What is the order of the messages that are sent and received by this PC in order to obtain an appropriate IP address?**
 
 - DHCPOFFER, DHCPDISCOVER, DHCPREQUEST, DHCPACK​
-- DHCPDISCOVER, DHCPOFFER, DHCPREQUEST, DHCPACK​
+- DHCPDISCOVER, DHCPOFFER, DHCPREQUEST, DHCPACK​ ✅
 - DHCPDISCOVER, DHCPREQUEST, DHCPOFFER, DHCPACK​
 - DHCPREQUEST, DHCPOFFER, DHCPDISCOVER, DHCPACK​
 
@@ -158,7 +156,7 @@ Networking Devices and Initial Configuration Module 7 – 9 Checkpoint Exam Q15
 
 - 3000
 - 1002
-- 3001
+- 3001 ✅
 - 4000
 - 1000
 
@@ -167,7 +165,7 @@ Networking Devices and Initial Configuration Module 7 – 9 Checkpoint Exam Q15
 **16. A host device needs to send a large video file across the network while providing data communication to other users. Which feature will allow different communication streams to occur at the same time, without having a single data stream using all available bandwidth?**
 
 - port numbers
-- multiplexing
+- multiplexing ✅
 - acknowledgments
 - window size
 
@@ -175,7 +173,7 @@ Networking Devices and Initial Configuration Module 7 – 9 Checkpoint Exam Q15
 
 **17. What does a client application select for a TCP or UDP source port number?**
 
-- a random value in the range of the registered ports
+- a random value in the range of the registered ports ✅
 - a random value in the well-known port range
 - a predefined value in the well-known port range
 - a predefined value in the range of the registered ports
@@ -186,7 +184,7 @@ Networking Devices and Initial Configuration Module 7 – 9 Checkpoint Exam Q15
 
 - The acknowledgment number is set to 11 to signify an acknowledgment packet and synchronization packet back to the client.
 - The acknowledgment number field uses a random source port number in response to the client.
-- The acknowledgment number field is modified by adding 1 to the randomly chosen initial sequence number in response to the client.
+- The acknowledgment number field is modified by adding 1 to the randomly chosen initial sequence number in response to the client. ✅
 - The acknowledgment number is set to 1 to signify an acknowledgment packet back to the client.
 
 **Explanation:** To establish a session with the client, the TCP server will acknowledge the receipt of the SYN segment from the client. The server sends a segment back to the client with the ACK flag set indicating that the acknowledgment number is significant.The value of the acknowledgment number field is equal to the randomly chosen initial sequence number (ISN) plus 1.
@@ -194,8 +192,8 @@ Networking Devices and Initial Configuration Module 7 – 9 Checkpoint Exam Q15
 **19. Which two TCP header fields are used to confirm receipt of data? (Choose two.)**
 
 - checksum
-- acknowledgment number
-- sequence number
+- acknowledgment number ✅
+- sequence number ✅
 - preamble
 - FCS
 
@@ -204,7 +202,7 @@ Networking Devices and Initial Configuration Module 7 – 9 Checkpoint Exam Q15
 **20. What is a socket?**
 
 - the combination of the source and destination IP address and source and destination Ethernet address
-- the combination of a source IP address and port number or a destination IP address and port number
+- the combination of a source IP address and port number or a destination IP address and port number ✅
 - the combination of the source and destination sequence and acknowledgment numbers
 - the combination of the source and destination sequence numbers and port numbers
 
@@ -213,7 +211,7 @@ Networking Devices and Initial Configuration Module 7 – 9 Checkpoint Exam Q15
 **21. What TCP mechanism is used to enhance performance by allowing a device to continuously send a steady stream of segments as long as the device is also receiving necessary acknowledgements?**
 
 - socket pair
-- sliding window
+- sliding window ✅
 - three-way handshake
 - two-way handshake
 
@@ -226,7 +224,7 @@ Networking Devices and Initial Configuration Module 7 – 9 Checkpoint Exam Q15
 - SW1 will send an ARP reply with its Fa0/1 MAC address.
 - RT1 will send an ARP reply with the PC3 MAC address.
 - RT1 will forward the ARP request to PC3.
-- **RT1 will send an ARP reply with its own Fa0/0 MAC address.**
+- RT1 will send an ARP reply with its own Fa0/0 MAC address. ✅
 
 **Explanation:** When a network device has to communicate with a device on another network, it broadcasts an ARP request asking for the default gateway MAC address. The default gateway (RT1) unicasts an ARP reply with the Fa0/0 MAC address.
 
@@ -234,7 +232,7 @@ Networking Devices and Initial Configuration Module 7 – 9 Checkpoint Exam Q15
 ![](https://itexamanswers.net/wp-content/uploads/2020/05/2_i206128v1n1_206128-1.jpg)
 
 - the amount of data that can be sent at one time
-- **the amount of data that can be sent before an acknowledgment is required**
+- the amount of data that can be sent before an acknowledgment is required ✅
 - the total number of bits received during this TCP session
 - a random number that is used in establishing a connection with the 3-way handshake
 
