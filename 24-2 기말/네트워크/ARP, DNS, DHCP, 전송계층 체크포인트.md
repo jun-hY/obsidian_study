@@ -53,46 +53,37 @@
 - 192.168.0.254
 - 192.168.1.1
 
-**Explanation:** When a network device has to communicate with a device on another network, it broadcasts an ARP request asking for the default gateway MAC address. The default gateway (RT1) unicasts an ARP reply with the Fa0/0 MAC address.
 
-**7. What are two problems that can be caused by a large number of ARP request and reply messages? (Choose two.)**
+**7. 많은 수의 ARP 요청 및 회신 메시지로 인해 발생할 수 있는 두 가지 문제는 무엇입니까? (두 가지를 선택합니다.)**  
+  
+- ARP 요청은 브로드캐스트로 전송되며 전체 서브넷에 플러딩됩니다. ✅  
+- ARP 응답 메시지에는 48비트 MAC 주소와 32비트 IP 주소가 포함되어 있어 페이로드가 매우 많기 때문에 네트워크에 과부하가 걸릴 수 있습니다.  
+- 스위치는 연결된 서브넷의 모든 트래픽을 집중시키기 때문에 과부하가 걸립니다.  
+- 모든 ARP 요청 메시지는 로컬 네트워크의 모든 노드에서 처리해야 합니다. ✅  
+- ARP 요청 및 응답 메시지가 많으면 전환 프로세스가 느려져 스위치가 MAC 테이블을 많이 변경할 수 있습니다.
 
-- The ARP request is sent as a broadcast, and will flood the entire subnet. ✅
-- The network may become overloaded because ARP reply messages have a very large payload due to the 48-bit MAC address and 32-bit IP address that they contain.
-- Switches become overloaded because they concentrate all the traffic from the attached subnets.
-- All ARP request messages must be processed by all nodes on the local network. ✅
-- A large number of ARP request and reply messages may slow down the switching process, leading the switch to make many changes in its MAC table.
 
-**Explanation:** ARP requests are sent as broadcasts:  
-(1) All nodes will receive them, and they will be processed by software, interrupting the CPU.  
-(2) The switch forwards (floods) Layer 2 broadcasts to all ports.
+**8. 한 사용자가 회사 웹 서버에 액세스할 수 없다고 보고합니다. 기술자가 웹 서버에 IP 주소로 액세스할 수 있는지 확인합니다. 이 문제의 두 가지 가능한 원인은 무엇인가요? (두 가지를 선택합니다.)**  
+  
+- 네트워크 연결이 중단되었습니다.  
+- 워크스테이션에서 기본 게이트웨이 주소가 잘못 구성되어 있습니다.  
+- 워크스테이션에서 DNS 서버 주소가 잘못 구성되었습니다. ✅  
+- 웹 서버가 잘못 구성되었습니다.  
+- 웹 서버 정보가 DNS 서버에 잘못 구성되어 있습니다. ✅
 
-A switch does not change its MAC table based on ARP request or reply messages. The switch populates the MAC table using the source MAC address of all frames. The ARP payload is very small and does not overload the switch.
-
-**8. A user reports that the corporate web server cannot be accessed. A technician verifies that the web server can be accessed by its IP address. What are two possible causes of the problem? (Choose two.)**
-
-- The network connection is down.
-- The default gateway address is misconfigured on the workstation.
-- The DNS server address is misconfigured on the workstation. ✅
-- The web server is misconfigured.
-- The web server information is misconfigured on the DNS server. ✅
-
-**Explanation:** The fact that the web server can be accessed by its IP address indicates that the web server is working and there is connectivity between the workstation and the web server. However, the web server domain name is not resolving correctly to its IP address. This could be caused by a misconfiguration of the DNS server IP address on the workstation or the wrong entry of the web server in the DNS server.
-
-**9. Which DHCP IPv4 message contains the following information?**  
-**Destination address: 255.255.255.255**  
-**Client IPv4 address: 0.0.0.0**  
-**Default gateway address: 0.0.0.0**  
-**Subnet mask: 0.0.0.0**
+**9. 다음 중 다음 정보가 포함된 DHCP IPv4 메시지는 무엇입니까?**  
+**목적지 주소: 255.255.255.255.255**  
+**클라이언트 IPv4 주소: 0.0.0**  
+**기본 게이트웨이 주소: 0.0.0.0**  
+**서브넷 마스크: 0.0.0**
 
 - DHCPREQUEST
 - DHCPACK
 - DHCPDISCOVER ✅
 - DHCPOFFER
 
-**Explanation:** A client will first send the DHCPDISCOVER broadcast message to find DHCPv4 servers on the network. This message will have the limited broadcast address, 255.255.255.255, as the destination address. The client IPv4 address, the default gateway address, and subnet fields will all be 0.0.0.0 because these have not yet been configured on the client. When the DHCPv4 server receives a DHCPDISCOVER message, it reserves an available IPv4 address to lease to the client and sends the unicast DHCPOFFER message to the requesting client. When the client receives the DHCPOFFER from the server, it sends back a DHCPREQUEST broadcast message. On receiving the DHCPREQUEST message, the server replies with a unicast DHCPACK message.
 
-**10. Which two commands could be used to check if DNS name resolution is working properly on a Windows PC? (Choose two.)**
+**10. Windows PC에서 DNS 이름 확인이 제대로 작동하는지 확인하는 데 사용할 수 있는 두 가지 명령은 무엇입니까? (두 가지를 선택합니다.)**
 
 - nbtstat cisco.com
 - net cisco.com
@@ -100,54 +91,46 @@ A switch does not change its MAC table based on ARP request or reply messages. T
 - ipconfig /flushdns
 - nslookup cisco.com ✅
 
-**Explanation:** The ping command tests the connection between two hosts. When ping uses a host domain name to test the connection, the resolver on the PC will first perform the name resolution to query the DNS server for the IP address of the host. If the ping command is unable to resolve the domain name to an IP address, an error will result.
 
-Nslookup is a tool for testing and troubleshooting DNS servers.
+**11. 다음 중 DHC 검색 메시지를 설명하는 세 가지 문장은 무엇입니까? (세 가지를 선택합니다.)**
 
-**11. Which three statements describe a DHCP Discover message? (Choose three.)**
+- 메시지는 DHCP 서버만 받습니다.
+- 이 메시지는 IP 주소를 찾는 고객으로부터 전송됩니다. ✅
+- 소스 MAC 주소는 48개입니다(FF-FF-FF-FF-FF-FF).
+- 이 메시지는 IP 주소를 제공하는 서버에서 전송됩니다.
+- 모든 호스트는 메시지를 받지만 응답하는 호스트는 DHC 서버뿐입니다. ✅
+- 대상 IP 주소는 255.255.255.255입니다. ✅
 
-- Only the DHCP server receives the message.
-- The message comes from a client seeking an IP address. ✅
-- The source MAC address is 48 ones (FF-FF-FF-FF-FF-FF).
-- The message comes from a server offering an IP address.
-- All hosts receive the message, but only a DHCP server replies. ✅
-- The destination IP address is 255.255.255.255. ✅
 
-**Explanation:** When a host configured to use DHCP powers up on a network it sends a DHCPDISCOVER message. FF-FF-FF-FF-FF-FF is the L2 broadcast address. A DHCP server replies with a unicast DHCPOFFER message back to the host.
-
-**12. What IPv4-related DNS record type is used by a DNS server in response to a host requesting for a web server address via the URL?**
+**12. URL을 통해 웹 서버 주소를 요청하는 호스트에 응답하여 DNS 서버에서 사용하는 IPv4 관련 DNS 레코드 유형은 무엇입니까?**
 
 - NS record
 - A record ✅
 - MX record
 - AAAA record
 
-**Explanation:** A DNS server uses an A record type for an IPv4 end device address. The AAAA record is for an IPv6 end device address. The MX record is used to map the domain name to mail exchange servers. The NS record indicates the authoritative name server.
 
-**13. Which two tasks can be performed by a local DNS server? (Choose two.)**
+**13. 로컬 DNS 서버에서 수행할 수 있는 두 가지 작업은 무엇입니까? (두 가지를 선택합니다.)**
 
-- retrieving email messages
-- providing IP addresses to local hosts
-- mapping name-to-IP addresses for internal hosts ✅
-- forwarding name resolution requests between servers ✅
-- allowing data transfer between two network devices
+- 이메일 메시지 검색
+- 로컬 호스트에 IP 주소 제공
+- 내부 호스트에 대한 이름-IP 주소 매핑 ✅
+- 서버 간 이름 확인 요청 전달 ✅
+- 두 네트워크 장치 간의 데이터 전송 허용
 
-**Explanation:** Two important functions of DNS are to (1) provide IP addresses for domain names such as www.cisco.com, and (2) forward requests that cannot be resolved to other servers in order to provide domain name to IP address translation. DHCP provides IP addressing information to local devices. A file transfer protocol such as FTP, SFTP, or TFTP provides file sharing services. IMAP or POP can be used to retrieve an email message from a server.
 
-**14. A DHCP configured PC boots up. What is the order of the messages that are sent and received by this PC in order to obtain an appropriate IP address?**
+**14. DHCP로 구성된 PC가 부팅됩니다. 이 PC가 적절한 IP 주소를 얻기 위해 주고받은 메시지의 순서는 무엇인가요?**
 
 - DHCPOFFER, DHCPDISCOVER, DHCPREQUEST, DHCPACK​
 - DHCPDISCOVER, DHCPOFFER, DHCPREQUEST, DHCPACK​ ✅
 - DHCPDISCOVER, DHCPREQUEST, DHCPOFFER, DHCPACK​
 - DHCPREQUEST, DHCPOFFER, DHCPDISCOVER, DHCPACK​
 
-**Explanation:** During the boot process, the PC starts by broadcasting a DHCPDISCOVER message to request an available IP address. A DHCP server replies with a DHCPOFFER message, which offers a lease to the device. This message contains the IP address and other information. The PC may receive multiple DHCPOFFER messages if there is more than one DHCP server. In this case, the PC must choose one of the server DHCP offerings. The PC broadcasts a DHCPREQUEST message that identifies the explicit server and lease offer that the PC is accepting. Then the server will return a DHCPACK message that acknowledges to the PC that the lease is finalized.
 
-**15. Refer to the exhibit. Host A and the file server have established a TCP session to exchange data. What acknowledgement number will the file server send to host A to acknowledge receipt of the first three segments of data?**
+**15. 전시를 참조하세요. 호스트 A와 파일 서버는 데이터를 교환하기 위해 TCP 세션을 설정했습니다. 파일 서버가 호스트 A에게 처음 세 세그먼트의 데이터 수신을 승인하기 위해 전송하는 승인 번호는 무엇입니까?**
 
 ![Networking Devices and Initial Configuration Module 7 - 9 Checkpoint Exam 15](https://itexamanswers.net/wp-content/uploads/2022/07/2022-07-24_152712.jpg)
 
-Networking Devices and Initial Configuration Module 7 – 9 Checkpoint Exam Q15
 
 - 3000
 - 1002
@@ -155,36 +138,32 @@ Networking Devices and Initial Configuration Module 7 – 9 Checkpoint Exam Q15
 - 4000
 - 1000
 
-**Explanation:** The file server will send back an acknowledgement number of 3001 to host A after receiving the first three segments. The starting sequence number was 1. 1000 bytes were sent in each of the three segments for a total of 3000 bytes. Because the initial sequence number was 1, the last byte sent was byte number 3000. The file server will now expect to receive byte number 3001 and above. Therefore, it communicates to host A through the acknowledgement number of 3001.
 
-**16. A host device needs to send a large video file across the network while providing data communication to other users. Which feature will allow different communication streams to occur at the same time, without having a single data stream using all available bandwidth?**
+**16. 호스트 장치는 다른 사용자에게 데이터 통신을 제공하면서 네트워크를 통해 대용량 비디오 파일을 전송해야 합니다. 다음 중 모든 사용 가능한 대역폭을 사용하는 단일 데이터 스트림 없이도 서로 다른 통신 스트림을 동시에 생성할 수 있는 기능은?**
 
 - port numbers
 - multiplexing ✅
 - acknowledgments
 - window size
 
-**Explanation:** Multiplexing is useful for interleaving multiple communication streams. Window size is used to slow down the rate of data communication. Port numbers are used to pass data streams to their proper applications. Acknowledgments are used to notify a sending device that a stream of data packets has or has not been received.
 
-**17. What does a client application select for a TCP or UDP source port number?**
+**17. 클라이언트 애플리케이션은 TCP 또는 UDP 소스 포트 번호에 대해 무엇을 선택하나요?**
 
-- a random value in the range of the registered ports ✅
-- a random value in the well-known port range
-- a predefined value in the well-known port range
-- a predefined value in the range of the registered ports
+- 등록된 포트 범위의 무작위 값 ✅
+- 잘 알려진 포트 범위의 무작위 값
+- 잘 알려진 포트 범위의 미리 정의된 값
+- 등록된 포트 범위의 미리 정의된 값
 
-**Explanation:** The client randomly selects an available source port in the range of the registered ports.
 
-**18. A client is establishing a TCP session with a server. How is the acknowledgment number in the response segment to the client determined?**
+**18. 클라이언트가 서버와 TCP 세션을 설정하고 있습니다. 클라이언트에 대한 응답 세그먼트의 확인 번호는 어떻게 결정되나요?**
 
-- The acknowledgment number is set to 11 to signify an acknowledgment packet and synchronization packet back to the client.
-- The acknowledgment number field uses a random source port number in response to the client.
-- The acknowledgment number field is modified by adding 1 to the randomly chosen initial sequence number in response to the client. ✅
-- The acknowledgment number is set to 1 to signify an acknowledgment packet back to the client.
+- 확인 번호는 11로 설정되어 클라이언트에 대한 확인 패킷 및 동기화 패킷을 다시 의미합니다.
+- 확인 번호 필드는 클라이언트에 응답하여 무작위 소스 포트 번호를 사용합니다.
+- 승인 번호 필드는 클라이언트에 응답하여 무작위로 선택한 초기 시퀀스 번호에 1을 추가하여 수정됩니다. ✅
+- 확인 번호는 클라이언트에 대한 확인 패킷을 다시 표시하기 위해 1로 설정됩니다.
 
-**Explanation:** To establish a session with the client, the TCP server will acknowledge the receipt of the SYN segment from the client. The server sends a segment back to the client with the ACK flag set indicating that the acknowledgment number is significant.The value of the acknowledgment number field is equal to the randomly chosen initial sequence number (ISN) plus 1.
 
-**19. Which two TCP header fields are used to confirm receipt of data? (Choose two.)**
+**19. 데이터 수신을 확인하는 데 사용되는 두 개의 TCP 헤더 필드는 무엇입니까? (두 개를 선택합니다.)**
 
 - checksum
 - acknowledgment number ✅
@@ -192,43 +171,37 @@ Networking Devices and Initial Configuration Module 7 – 9 Checkpoint Exam Q15
 - preamble
 - FCS
 
-**Explanation:** Together the TCP sequence number and acknowledgment number fields are used by the receiver to inform the sender of the bytes of data that the receiver has accepted.
 
-**20. What is a socket?**
+**20. 소켓이란 무엇인가요?**
 
-- the combination of the source and destination IP address and source and destination Ethernet address
-- the combination of a source IP address and port number or a destination IP address and port number ✅
-- the combination of the source and destination sequence and acknowledgment numbers
-- the combination of the source and destination sequence numbers and port numbers
+- 소스 및 목적지 IP 주소와 소스 및 목적지 이더넷 주소의 조합
+- 소스 IP 주소와 포트 번호 또는 대상 IP 주소와 포트 번호의 조합 ✅
+- 소스 및 목적지 시퀀스와 확인 번호의 조합
+- 소스 및 목적지 시퀀스 번호와 포트 번호의 조합
 
-**Explanation:** A socket is a combination of the source IP address and source port or the destination IP address and the destination port number.
 
-**21. What TCP mechanism is used to enhance performance by allowing a device to continuously send a steady stream of segments as long as the device is also receiving necessary acknowledgements?**
+**21. 장치가 필요한 승인을 받는 한 장치가 지속적으로 세그먼트 스트림을 전송할 수 있도록 하여 성능을 향상시키는 데 사용되는 TCP 메커니즘은 무엇입니까?**
 
 - socket pair
 - sliding window ✅
 - three-way handshake
 - two-way handshake
 
-**Explanation:** TCP uses windows to attempt to manage the rate of transmission to the maximum flow that the network and destination device can support while minimizing loss and retransmissions. When overwhelmed with data, the destination can send a request to reduce the of the window. The process of the destination sending acknowledgments as it processes bytes received and the continual adjustment of the source send window is known as sliding windows.
 
-**22. Refer to the exhibit. PC1 issues an ARP request because it needs to send a packet to PC3. In this scenario, what will happen next?**  
+**22. 전시를 참조하세요. PC1은 PC3로 패킷을 보내야 하기 때문에 ARP 요청을 발행합니다. 이 시나리오에서는 다음에 어떤 일이 일어날까요?**
 ![](https://itexamanswers.net/wp-content/uploads/2020/10/2020-10-26_082551.jpg)
 
-- RT1 will send an ARP reply with its own Fa0/1 MAC address.
-- SW1 will send an ARP reply with its Fa0/1 MAC address.
-- RT1 will send an ARP reply with the PC3 MAC address.
-- RT1 will forward the ARP request to PC3.
-- RT1 will send an ARP reply with its own Fa0/0 MAC address. ✅
+- RT1은 자체 Fa0/1 MAC 주소로 ARP 응답을 보냅니다.
+- SW1은 Fa0/1 MAC 주소와 함께 ARP 응답을 보냅니다.
+- RT1은 PC3 MAC 주소와 함께 ARP 응답을 보냅니다.
+- RT1은 ARP 요청을 PC3로 전달합니다.
+- RT1은 자체 Fa0/0 MAC 주소로 ARP 응답을 보냅니다. ✅
 
-**Explanation:** When a network device has to communicate with a device on another network, it broadcasts an ARP request asking for the default gateway MAC address. The default gateway (RT1) unicasts an ARP reply with the Fa0/0 MAC address.
 
-**23. Refer to the exhibit. What does the value of the window size specify?**  
+**23. 전시를 참조하세요. 윈도우 사이즈즈의 값은 무엇을 의미하나요?** 
 ![](https://itexamanswers.net/wp-content/uploads/2020/05/2_i206128v1n1_206128-1.jpg)
 
-- the amount of data that can be sent at one time
-- the amount of data that can be sent before an acknowledgment is required ✅
-- the total number of bits received during this TCP session
-- a random number that is used in establishing a connection with the 3-way handshake
-
-**Explanation:** The window size determines the number of bytes that can be sent before expecting an acknowledgment. The acknowledgment number is the number of the next expected byte.
+- 한 번에 전송할 수 있는 데이터의 양
+- 확인이 필요하기 전에 전송할 수 있는 데이터의 양 ✅
+- 이 TCP 세션 동안 받은 총 비트 수
+- 3방향 악수와의 연결을 설정하는 데 사용되는 난수 번호
