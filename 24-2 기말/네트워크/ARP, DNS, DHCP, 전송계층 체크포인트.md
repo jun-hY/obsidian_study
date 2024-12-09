@@ -24,31 +24,26 @@
 - ARP, multicast
 - ARP, broadcast ✅
 
-**Explanation:** An ARP request is broadcast to all devices on a LAN segment which seek the MAC address for a known IP address. Pings are used to verify connectivity between two devices, and DNS resolves URLs to IP addresses.
 
-**4. When a computer is pinging another computer for the first time, what type of message does it place on the network to determine the MAC address of the other device?**
+**4. 컴퓨터가 처음으로 다른 컴퓨터에 핑을 보낼 때, 다른 장치의 MAC 주소를 결정하기 위해 네트워크에 어떤 유형의 메시지를 표시하나요?**  
+  
+- 로컬 네트워크에 연결된 모든 레이어 3 장치에 대한 멀티캐스트  
+- RFI(정보 요청) 메시지  
+- ARP 요청 ✅  
+- ICMP 핑
 
-- a multicast to any Layer 3 devices that are connected to the local network
-- an RFI (Request for Information) message
-- an ARP request ✅
-- an ICMP ping
 
-**Explanation:** An ARP request is used to determine any unknown MAC address when the destination IP address is known. In an IPv4-based network, this request is sent as a Layer 2 broadcast.
+**5. 사용자가 원격 네트워크의 웹 서버에 HTTP 요청을 보냅니다. 이 요청을 캡슐화하는 동안 프레임의 주소 필드에 목적지를 표시하기 위해 어떤 정보가 추가되나요?**
 
-**5. A user sends an HTTP request to a web server on a remote network. During encapsulation for this request, what information is added to the address field of a frame to indicate the destination?**
+- 기본 게이트웨이의 IP 주소  
+- 대상 호스트의 MAC 주소  
+- 대상 호스트의 네트워크 도메인  
+- 기본 게이트웨이의 MAC 주소 ✅
 
-- the IP address of the default gateway
-- the MAC address of the destination host
-- the network domain of the destination host
-- the MAC address of the default gateway ✅
 
-**Explanation:** A frame is encapsulated with source and destination MAC addresses. The source device will not know the MAC address of the remote host. An ARP request will be sent by the source and will be responded to by the router. The router will respond with the MAC address of its interface, the one which is connected to the same network as the source.
-
-**6. Refer to the exhibit. When PC1 wants to send a packet to PC3, the IP address of the device that will respond to the ARP request is**
+**6. 전시를 참조하세요. PC1이 PC3로 패킷을 전송하려는 경우 ARP 요청에 응답할 장치의 IP 주소는 다음과 같습니다**
 
 ![Networking Devices and Initial Configuration Module 7 - 9 Checkpoint Exam Q6](https://itexamanswers.net/wp-content/uploads/2022/07/2022-07-24_152556.jpg)
-
-Networking Devices and Initial Configuration Module 7 – 9 Checkpoint Exam Q6
 
 - 192.168.1.2
 - 192.168.1.254
