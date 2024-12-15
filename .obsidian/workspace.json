@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "24-2 기말/ai 과제/3주차_report.md",
+                "file": "24-2 기말/ai 과제/4주차_report.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3주차_report"
+              "title": "4주차_report"
             }
           }
         ],
@@ -179,8 +179,9 @@
   },
   "active": "d817905bfd1c2eab",
   "lastOpenFiles": [
-    "24-2 기말/ai 과제/2주차_report.md",
     "24-2 기말/ai 과제/3주차_report.md",
+    "24-2 기말/ai 과제/4주차_report.md",
+    "24-2 기말/ai 과제/2주차_report.md",
     "24-2 기말/ai 과제/1주차_report.md",
     "24-2 기말/ai 과제",
     "24-2 기말/네트워크/네트워크 경로설정 체크포인트.md",
@@ -208,7 +209,6 @@
     "24-2 중간/Linux.md",
     "24-2 중간/AI.md",
     "24-2 중간/Database.md",
-    "24-2 중간/웹 프로그래밍.md",
     "24-2 중간",
     "2일차.zip",
     "C언어 1일차.zip"

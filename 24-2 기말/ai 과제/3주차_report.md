@@ -59,21 +59,3 @@
   text = "  Hello, Python!  "
   print(text.strip())  # 출력: Hello, Python!
   ```
-
-## 연습 문제
-1. **문자열 반복**:
-   ```python
-   repeat = "Hi "
-   print(repeat * 6)  # 출력: Hi Hi Hi Hi Hi Hi
-   ```
-2. **문자열 포매팅**:
-   ```python
-   name = "홍길동"
-   age = 30
-   print(f"{name}의 나이는 {age}살입니다.")
-   ```
-3. **문자열 분리와 결합**:
-   ```python
-   alphabet = "a:b:c:d"
-   print(alphabet.split(":"))  # 출력: ['a', 'b', 'c', 'd']
-   ```
