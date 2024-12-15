@@ -23,3 +23,41 @@ python의 자료형은 bool, number, string, list, tuple, set, dictionary 등이
 
 ##### 연산자
 덧셈, 뺄셈, 곱셈, 나눗셈과 같은 산술 연산자, 대입하는 할당연산자, 비교연산자 등이 있다.
+
+##### **학습 내용**
+- **기본 변수와 연산**:
+```python 
+num = 20 res = num + 10 print(res)  # 출력: 30
+```
+    
+- **조건문**:
+```python
+if 배고픔:
+	print("밥을 먹는다.")
+```
+    
+- **반복문**:
+```python
+while 집에 가는 중:
+	print("왼발을 내딛는다.")
+	print("오른발을 내딛는다.")
+```
+    
+- **함수**:
+```python
+def 라면끓이기(라면, 물, 대기시간):
+	print(f"{라면}을 {물}ml로 {대기시간}분 동안 끓인다.")
+
+라면끓이기("삼양라면", 500, 4)
+```
+    
+- **클래스**:
+```python
+class 자동차:
+	def __init__(self):
+		self.속도 = 0
+	def 속도올리기(self, 증가속도):
+		self.속도 += 증가속도
+	def 현재속도(self):
+		return self.속도
+```
