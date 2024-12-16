@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "24-2 기말/ai 과제/8주차_report.md",
+                "file": "24-2 기말/ai 과제/3주차_report.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "8주차_report"
+              "title": "3주차_report"
             }
           }
         ]
@@ -167,7 +167,9 @@
     "24-2 기말/ai 과제/6주차_report.md",
     "24-2 기말/ai 과제/7주차_report.md",
     "24-2 기말/ai 과제/8주차_report.md",
-    "24-2 기말/ai 과제/4주차_report.md",
+    "24-2 기말/ai 과제/9주차_report.md",
+    "24-2 기말/ai 과제/10주차_report.md",
+    "24-2 기말/ai 과제/11주차_report.md",
     "ReactJs.md",
     "24-2 기말/ai 과제/3주차_report.md",
     "24-2 기말/ai 과제/2주차_report.md",
@@ -191,8 +193,6 @@
     "반복문.md",
     "사용자 함수.md",
     "중첩 반복문.md",
-    "Hello, World!.md",
-    "C언어 강의 목차.md",
     "스크린샷 2024-10-04 141854.png",
     "24-2 중간",
     "2일차.zip",

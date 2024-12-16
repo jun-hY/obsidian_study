@@ -1,124 +1,196 @@
-# 함수와 클래스 요약
+## 딕셔너리 자료형
 
-## 함수
-
-### 함수의 정의와 구조
-- 함수는 코드의 재사용성을 높이고 모듈화를 가능하게 함.
-- 기본 구조:
+### 생성
+- Key-Value 형태로 데이터를 저장하는 자료형.
+- 예시:
   ```python
-  def 함수이름(매개변수1, 매개변수2):
-      수행할 문장
-      return 반환값
+  person = {'name': '홍길동', 'age': 26, 'weight': 82}
+  students = {2019001: '이순신', 2019002: '김유신', 2019003: '강감찬'}
   ```
 
-### 인자 전달 방식
-1. 기본 인자 전달: 위치 또는 키워드를 이용.
-2. 기본값 설정:
-   ```python
-   def func(a, b=10):
-       return a + b
-   ```
-3. 가변 인자 (`*args`):
-   ```python
-   def add_many(*args):
-       return sum(args)
-   ```
-4. 키워드 가변 인자 (`**kwargs`):
-   ```python
-   def print_info(**kwargs):
-       for key, value in kwargs.items():
-           print(key, value)
-   ```
-
-### 반환문
-- `return`을 사용해 값 반환:
+### 조회
+- 특정 키 값으로 데이터 접근 가능:
   ```python
-  def add(a, b):
-      return a + b
+  person['name']  # '홍길동'
   ```
-- 여러 값 반환 가능:
+- 키, 값, 또는 키-값 쌍을 조회:
   ```python
-  def add_and_multiply(a, b):
-      return a + b, a * b
+  person.keys()      # dict_keys(['name', 'age', 'weight'])
+  person.values()    # dict_values(['홍길동', 26, 82])
+  person.items()     # dict_items([('name', '홍길동'), ('age', 26), ('weight', 82)])
   ```
 
-### 전역 변수와 지역 변수
-- `global` 키워드를 사용해 함수 내부에서 전역 변수 수정 가능:
-  ```python
-  def modify_global():
-      global x
-      x = 10
-  ```
+### 추가 및 수정
+- 새로운 항목 추가: `person['job'] = '학생'`
+- 기존 항목 수정: `person['age'] = 27`
 
-### 람다 함수
-- 익명 함수:
-  ```python
-  add = lambda x, y: x + y
-  ```
+### 삭제
+- 특정 키 삭제: `del person['age']`
+- 전체 삭제: `person.clear()`
 
-### 내장 함수
-- 대표적인 함수들:
-  - 수학 연산: `abs()`, `pow()`, `round()`
-  - 형 변환: `int()`, `str()`, `list()`
-  - 데이터 처리: `sorted()`, `zip()`
+### 연산
+- 키 존재 여부 확인:
+  ```python
+  'name' in person  # True
+  'hobby' not in person  # True
+  ```
+- 딕셔너리 길이: `len(person)`
 
 ---
 
-## 클래스
+## 집합 자료형
 
-### 클래스의 개요
-- 객체지향 프로그래밍(OOP)의 기본 단위로, 데이터와 메서드(함수)를 포함.
-- 클래스 정의:
+### 생성
+- 중복을 허용하지 않으며, 순서가 없는 데이터 저장.
+- 예시:
   ```python
-  class 클래스이름:
-      def __init__(self, 매개변수):
-          self.속성 = 값
-      def 메서드(self):
-          수행할 문장
+  set1 = {10, 20, 30, 40}
+  days_set = set(['Mon', 'Tue', 'Wed', 'Thu'])
   ```
 
-### 클래스 구성
-1. 생성자 (`__init__`): 객체 초기화.
-   ```python
-   class Car:
-       def __init__(self, speed):
-           self.speed = speed
-   ```
-2. 메서드: 클래스 내부에 정의된 함수.
-   ```python
-   def speed_up(self, increment):
-       self.speed += increment
-   ```
-3. 접근자와 설정자:
-   - 속성 값 가져오기:
-     ```python
-     def get_speed(self):
-         return self.speed
-     ```
-   - 속성 값 설정:
-     ```python
-     def set_speed(self, speed):
-         self.speed = speed
-     ```
-
-### 상속
-- 기존 클래스의 기능을 확장하는 데 사용:
+### 추가 및 삭제
+- 원소 추가:
   ```python
-  class Truck(Car):
-      def __init__(self, speed, load):
-          super().__init__(speed)
-          self.load = load
+  s.add(500)  # 단일 원소 추가
+  s.update([600, 700])  # 여러 원소 추가
   ```
-- 메서드 오버라이딩 가능.
-
-### 클래스 변수
-- 모든 객체가 공유하는 변수.
+- 원소 삭제:
   ```python
-  class Circle:
-      PI = 3.14
-      def __init__(self, radius):
-          self.radius = radius
-      def area(self):
-          return Circle.PI * self.radius ** 2
-  
-```
+  s.remove(100)  # 삭제할 원소가 없으면 오류 발생
+  s.discard(100)  # 삭제할 원소가 없어도 정상 실행
+  s.clear()  # 모든 원소 삭제
+  ```
+
+### 집합 연산
+- 합집합:
+  ```python
+  s1 | s2  # 또는 s1.union(s2)
+  ```
+- 교집합:
+  ```python
+  s1 & s2  # 또는 s1.intersection(s2)
+  ```
+- 차집합:
+  ```python
+  s1 - s2  # 또는 s1.difference(s2)
+  ```
+- 대칭 차집합:
+  ```python
+  s1 ^ s2  # 또는 s1.symmetric_difference(s2)
+  ```
+- 부분집합/상위집합 여부 확인:
+  ```python
+  s2.issubset(s1)
+  s1.issuperset(s2)
+  ```
+- 서로소 여부 확인:
+  ```python
+  s1.isdisjoint(s2)
+  ```
+
+---
+## 부울 자료형
+- **True / False**를 나타내는 자료형
+- 주요 예제:
+  ```python
+  bool(-1)  # True
+  bool(0)   # False
+  bool('')  # False
+  bool('hi')  # True
+  ```
+
+## 연산자
+- **비교 연산자**:
+  ```python
+  x, y = 10, 20
+  print(x > y)  # False
+  print(x <= y)  # True
+  ```
+- **논리 연산자**:
+  ```python
+  x, y = True, False
+  print(x and y)  # False
+  print(x or y)   # True
+  ```
+- **멤버십 연산자**:
+  ```python
+  print(10 in [10, 20, 30])  # True
+  print('a' not in 'apple')  # False
+  ```
+
+## 조건문
+### if 문
+- 기본 구조:
+  ```python
+  if 조건:
+      실행할 코드
+  ```
+- 예제:
+  ```python
+  age = 18
+  if age < 20:
+      print('청소년 할인')
+  ```
+
+### if-else 문
+- 기본 구조:
+  ```python
+  if 조건:
+      실행할 코드
+  else:
+      다른 코드
+  ```
+- 예제:
+  ```python
+  num = -5
+  if num < 0:
+      print('음수입니다.')
+  else:
+      print('양수입니다.')
+  ```
+
+### if-elif-else 문
+- 여러 조건을 처리할 때 사용
+  ```python
+  score = 85
+  if score >= 90:
+      grade = 'A'
+  elif score >= 80:
+      grade = 'B'
+  else:
+      grade = 'C'
+  print(grade)
+  ```
+
+## 반복문
+### while 문
+- 조건이 참일 동안 코드 블록을 반복 실행
+  ```python
+  i = 0
+  while i < 5:
+      print(i)
+      i += 1
+  ```
+
+### for 문
+- 컬렉션의 요소를 하나씩 순회하며 실행
+  ```python
+  for i in range(5):
+      print(i)
+  ```
+
+### break와 continue
+- **break**: 반복문을 즉시 종료
+- **continue**: 현재 반복을 건너뛰고 다음 반복으로 이동
+  ```python
+  for i in range(5):
+      if i == 3:
+          break
+      print(i)
+
+  for i in range(5):
+      if i == 3:
+          continue
+      print(i)
+  ```
+
