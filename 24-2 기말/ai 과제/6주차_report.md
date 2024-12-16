@@ -1,4 +1,92 @@
+## 딕셔너리 자료형
 
+### 생성
+- Key-Value 형태로 데이터를 저장하는 자료형.
+- 예시:
+  ```python
+  person = {'name': '홍길동', 'age': 26, 'weight': 82}
+  students = {2019001: '이순신', 2019002: '김유신', 2019003: '강감찬'}
+  ```
+
+### 조회
+- 특정 키 값으로 데이터 접근 가능:
+  ```python
+  person['name']  # '홍길동'
+  ```
+- 키, 값, 또는 키-값 쌍을 조회:
+  ```python
+  person.keys()      # dict_keys(['name', 'age', 'weight'])
+  person.values()    # dict_values(['홍길동', 26, 82])
+  person.items()     # dict_items([('name', '홍길동'), ('age', 26), ('weight', 82)])
+  ```
+
+### 추가 및 수정
+- 새로운 항목 추가: `person['job'] = '학생'`
+- 기존 항목 수정: `person['age'] = 27`
+
+### 삭제
+- 특정 키 삭제: `del person['age']`
+- 전체 삭제: `person.clear()`
+
+### 연산
+- 키 존재 여부 확인:
+  ```python
+  'name' in person  # True
+  'hobby' not in person  # True
+  ```
+- 딕셔너리 길이: `len(person)`
+
+---
+
+## 집합 자료형
+
+### 생성
+- 중복을 허용하지 않으며, 순서가 없는 데이터 저장.
+- 예시:
+  ```python
+  set1 = {10, 20, 30, 40}
+  days_set = set(['Mon', 'Tue', 'Wed', 'Thu'])
+  ```
+
+### 추가 및 삭제
+- 원소 추가:
+  ```python
+  s.add(500)  # 단일 원소 추가
+  s.update([600, 700])  # 여러 원소 추가
+  ```
+- 원소 삭제:
+  ```python
+  s.remove(100)  # 삭제할 원소가 없으면 오류 발생
+  s.discard(100)  # 삭제할 원소가 없어도 정상 실행
+  s.clear()  # 모든 원소 삭제
+  ```
+
+### 집합 연산
+- 합집합:
+  ```python
+  s1 | s2  # 또는 s1.union(s2)
+  ```
+- 교집합:
+  ```python
+  s1 & s2  # 또는 s1.intersection(s2)
+  ```
+- 차집합:
+  ```python
+  s1 - s2  # 또는 s1.difference(s2)
+  ```
+- 대칭 차집합:
+  ```python
+  s1 ^ s2  # 또는 s1.symmetric_difference(s2)
+  ```
+- 부분집합/상위집합 여부 확인:
+  ```python
+  s2.issubset(s1)
+  s1.issuperset(s2)
+  ```
+- 서로소 여부 확인:
+  ```python
+  s1.isdisjoint(s2)
+  ```
 
 ## 부울 자료형
 - **True / False**를 나타내는 자료형
