@@ -1,99 +1,90 @@
-# 넘파이 요약
+## 판다스 개요
+- **판다스(Pandas)** 는 데이터 조작과 분석을 위한 Python 라이브러리입니다.
+- 주요 오브젝트: `Series`와 `DataFrame`.
+- `import pandas as pd`로 사용.
 
-## 넘파이 개요
-- **넘파이(Numpy)**는 대규모 다차원 배열과 행렬 연산을 지원하는 Python 라이브러리
-- 과학적 계산 및 데이터 분석에 주로 사용된다
-
-## ndarray (N-dimensional Array)
-
-- **ndarray 생성**:
+## 주요 오브젝트
+### Series
+- 1차원 데이터 구조로, 배열과 유사.
   ```python
-  import numpy as np
-  a = np.array([1, 2, 3])
-  print(a)  # 출력: array([1, 2, 3])
-```
-
-- **ndarray 속성**:
-  - `shape`: 배열의 형태 (행, 열 등)
-  - `ndim`: 배열의 차원
-  - `dtype`: 배열 원소의 데이터 타입
-  - `size`: 배열의 원소 수
-  - `itemsize`: 각 원소의 메모리 크기(byte)
-
-## 주요 함수
-
-- **배열 생성**:
-  ```python
-  np.zeros((2, 3))  # 0으로 채워진 배열 생성
-  np.ones((2, 3))   # 1로 채워진 배열 생성
-  np.full((2, 3), 100)  # 특정 값으로 채워진 배열 생성
-  np.eye(3)  # 단위 행렬 생성
+  sr = pd.Series([90, 80, 70], index=['Kim', 'Lee', 'Park'])
+  print(sr)
+  # 출력:
+  # Kim     90
+  # Lee     80
+  # Park    70
   ```
-  
-- **랜덤 데이터 생성**:
+- **인덱싱 및 슬라이싱**:
   ```python
-  np.random.rand(3, 3)  # 0~1 사이의 난수 배열 생성
-  np.random.randint(0, 10, size=5)  # 0~10 사이의 정수 난수 생성
+  print(sr['Kim'])  # 90
+  print(sr[:2])  # Kim, Lee의 데이터
   ```
 
-## 배열 연산
+### DataFrame
+- 2차원 데이터 구조로, 엑셀과 유사한 테이블 형식.
+  ```python
+  df = pd.DataFrame({
+      'Kor': [90, 85],
+      'Eng': [80, 95],
+      'Mat': [70, 65]
+  }, index=['Kim', 'Lee'])
+  print(df)
+  # 출력:
+  #      Kor  Eng  Mat
+  # Kim   90   80   70
+  # Lee   85   95   65
+  ```
+- **데이터 접근**:
+  ```python
+  print(df['Kor'])  # Kor 컬럼
+  print(df.loc['Kim'])  # Kim 행
+  ```
 
+## 데이터 확인 및 조작
+- **기본 정보 확인**:
+  ```python
+  print(df.head(3))  # 상위 3개 행
+  print(df.describe())  # 기본 통계 정보
+  ```
+- **데이터 정렬**:
+  ```python
+  df.sort_values(by='Kor', ascending=False)
+  ```
+
+## 데이터 연산
 - **기본 연산**:
   ```python
-  a = np.array([1, 2, 3])
-  b = np.array([4, 5, 6])
-  print(a + b)  # 배열의 덧셈: [5, 7, 9]
-  print(a * b)  # 배열의 곱셈: [4, 10, 18]
+  print(df + 2)  # 모든 값에 2 더하기
+  print(df * 2)  # 모든 값에 2 곱하기
   ```
-  
-- **브로드캐스팅**:
-
-  - 배열과 스칼라(숫자)의 연산이 가능.
+- **행/열 연산**:
   ```python
-  print(a + 10)  # [11, 12, 13]
+  print(df.sum(axis=0))  # 열 방향 합
+  print(df.mean(axis=1))  # 행 방향 평균
   ```
-  
-  - **행렬 곱**:
+
+## 결측치 처리
+- **결측 데이터 확인 및 처리**:
   ```python
-  a = np.array([[1, 2], [3, 4]])
-  b = np.array([[10, 20], [30, 40]])
-  print(np.matmul(a, b))  # 행렬 곱
+  df.isnull()  # 결측 데이터 확인
+  df.dropna(how='any')  # 결측 데이터 제거
+  df.fillna(value=0)  # 결측 데이터를 0으로 대체
   ```
 
-## 인덱싱과 슬라이싱
-
-- **1차원 배열**:
+## 데이터 합치기 및 그룹화
+- **데이터 합치기**:
   ```python
-  a = np.array([10, 20, 30, 40])
-  print(a[1:3])  # [20, 30]
+  df1 = pd.DataFrame({'name': ['Kim', 'Lee'], 'age': [20, 30]})
+  df2 = pd.DataFrame({'name': ['Kim', 'Lee'], 'score': [90, 80]})
+  result = pd.merge(df1, df2, on='name')
   ```
-  
-- **다차원 배열**:
+- **그룹화**:
   ```python
-  a = np.array([[1, 2], [3, 4], [5, 6]])
-  print(a[0, 1])  # 1행 2열 원소
-  print(a[:, 0])  # 모든 행의 1열 원소
+  grouped = df.groupby('Kor').sum()
   ```
 
-## 배열 변형
-
-- **배열 재구성**:
+## 데이터 필터링
+- **조건 필터링**:
   ```python
-  a = np.arange(6).reshape(2, 3)
-  print(a)
+  print(df[df['Kor'] > 80])  # Kor 점수가 80 이상인 행
   ```
-  
-- **배열 평탄화**:
-  ```python
-  a.flatten()  # 다차원 배열을 1차원으로 변환
-  ```
-
-## 축(axis) 연산
-
-- **축 방향 지정**:
-  ```python
-  a = np.array([[1, 2], [3, 4]])
-  print(a.sum(axis=0))  # 열 방향 합
-  print(a.sum(axis=1))  # 행 방향 합
-  ```
-

@@ -1,68 +1,97 @@
+## 넘파이 개요
+- **넘파이(Numpy)**는 대규모 다차원 배열과 행렬 연산을 지원하는 Python 라이브러리
+- 과학적 계산 및 데이터 분석에 주로 사용된다
 
-## 1. 모듈
-- **정의**: 코드를 재사용할 수 있도록 함수와 클래스들을 모아 놓은 파일.
-- **모듈 불러오기**:
-  ```python
-  import 모듈명  # 전체 모듈 불러오기
-  from 모듈명 import 함수명  # 특정 함수만 불러오기
-  import 모듈명 as 별칭  # 모듈에 별칭 부여
-  ```
-- **표준 라이브러리 사용 예시**:
-  ```python
-  import datetime
-  today = datetime.date.today()
-  print(today.year, today.month, today.day)  # 출력: 2023 10 24
+## ndarray (N-dimensional Array)
 
-  import random as rd
-  print(rd.randint(1, 10))  # 1부터 10 사이의 정수
-  ```
+- **ndarray 생성**:
+  ```python
+  import numpy as np
+  a = np.array([1, 2, 3])
+  print(a)  # 출력: array([1, 2, 3])
+```
 
-## 2. 예외 처리
-- **정의**: 실행 중 발생할 수 있는 오류를 처리하여 프로그램이 중단되지 않도록 함.
-- **구문**:
+- **ndarray 속성**:
+  - `shape`: 배열의 형태 (행, 열 등)
+  - `ndim`: 배열의 차원
+  - `dtype`: 배열 원소의 데이터 타입
+  - `size`: 배열의 원소 수
+  - `itemsize`: 각 원소의 메모리 크기(byte)
+
+## 주요 함수
+
+- **배열 생성**:
   ```python
-  try:
-      오류 발생 가능 코드
-  except 오류타입 as 변수:
-      오류 처리 코드
-  else:
-      오류가 없을 때 실행되는 코드
-  finally:
-      항상 실행되는 코드
+  np.zeros((2, 3))  # 0으로 채워진 배열 생성
+  np.ones((2, 3))   # 1로 채워진 배열 생성
+  np.full((2, 3), 100)  # 특정 값으로 채워진 배열 생성
+  np.eye(3)  # 단위 행렬 생성
   ```
-- **사용 예시**:
+  
+- **랜덤 데이터 생성**:
   ```python
-  try:
-      a, b = map(int, input('두 수를 입력하세요: ').split())
-      result = a / b
-      print(result)
-  except ZeroDivisionError:
-      print('0으로 나눌 수 없습니다.')
-  except ValueError:
-      print('숫자를 입력하세요.')
-  finally:
-      print('프로그램 종료.')
+  np.random.rand(3, 3)  # 0~1 사이의 난수 배열 생성
+  np.random.randint(0, 10, size=5)  # 0~10 사이의 정수 난수 생성
   ```
 
-## 3. 파일 처리
-- **파일 열기 모드**:
-  - `r`: 읽기 모드
-  - `w`: 쓰기 모드 (기존 내용 삭제)
-  - `a`: 추가 모드
-- **파일 쓰기**:
+## 배열 연산
+
+- **기본 연산**:
   ```python
-  with open('file.txt', 'w') as f:
-      f.write('Hello, Python!\n')
+  a = np.array([1, 2, 3])
+  b = np.array([4, 5, 6])
+  print(a + b)  # 배열의 덧셈: [5, 7, 9]
+  print(a * b)  # 배열의 곱셈: [4, 10, 18]
   ```
-- **파일 읽기**:
+  
+- **브로드캐스팅**:
+
+  - 배열과 스칼라(숫자)의 연산이 가능.
   ```python
-  with open('file.txt', 'r') as f:
-      lines = f.readlines()  # 모든 줄 읽기
-      for line in lines:
-          print(line.strip())
+  print(a + 10)  # [11, 12, 13]
   ```
-- **추가 쓰기**:
+  
+  - **행렬 곱**:
   ```python
-  with open('file.txt', 'a') as f:
-      f.write('추가 내용\n')
+  a = np.array([[1, 2], [3, 4]])
+  b = np.array([[10, 20], [30, 40]])
+  print(np.matmul(a, b))  # 행렬 곱
   ```
+
+## 인덱싱과 슬라이싱
+
+- **1차원 배열**:
+  ```python
+  a = np.array([10, 20, 30, 40])
+  print(a[1:3])  # [20, 30]
+  ```
+  
+- **다차원 배열**:
+  ```python
+  a = np.array([[1, 2], [3, 4], [5, 6]])
+  print(a[0, 1])  # 1행 2열 원소
+  print(a[:, 0])  # 모든 행의 1열 원소
+  ```
+
+## 배열 변형
+
+- **배열 재구성**:
+  ```python
+  a = np.arange(6).reshape(2, 3)
+  print(a)
+  ```
+  
+- **배열 평탄화**:
+  ```python
+  a.flatten()  # 다차원 배열을 1차원으로 변환
+  ```
+
+## 축(axis) 연산
+
+- **축 방향 지정**:
+  ```python
+  a = np.array([[1, 2], [3, 4]])
+  print(a.sum(axis=0))  # 열 방향 합
+  print(a.sum(axis=1))  # 행 방향 합
+  ```
+
