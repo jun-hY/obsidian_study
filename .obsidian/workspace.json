@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "24-2 기말/ai 과제/8주차_report.md",
+                "file": "24-2 기말/ai 과제/11주차_report.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "8주차_report"
+              "title": "11주차_report"
             }
           }
         ]
@@ -164,9 +164,10 @@
   },
   "active": "e4d6a144d2af7e59",
   "lastOpenFiles": [
-    "24-2 기말/ai 과제/9주차_report.md",
     "24-2 기말/ai 과제/10주차_report.md",
+    "24-2 기말/ai 과제/11주차_report.md",
     "24-2 기말/ai 과제/8주차_report.md",
+    "24-2 기말/ai 과제/9주차_report.md",
     "24-2 기말/ai 과제/2주차_report.md",
     "24-2 기말/ai 과제/5주차_report.md",
     "24-2 기말/ai 과제/7주차_report.md",
@@ -192,7 +193,6 @@
     "배열.md",
     "반복문.md",
     "사용자 함수.md",
-    "중첩 반복문.md",
     "스크린샷 2024-10-04 141854.png",
     "24-2 중간",
     "2일차.zip",
