@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e4d6a144d2af7e59",
+            "id": "ebb96947fb48e2a7",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -163,12 +163,13 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "e4d6a144d2af7e59",
+  "active": "ebb96947fb48e2a7",
   "lastOpenFiles": [
+    "Pasted image 20241219071227.png",
+    "24-2 기말/인공지능.md",
     "Pasted image 20241219051850.png",
     "Pasted image 20241219045705.png",
     "24-2 기말/리눅스시스템.md",
-    "24-2 기말/인공지능.md",
     "24-2 기말/ai 과제/14주차_report.md",
     "24-2 기말/ai 과제/12주차_report.md",
     "24-2 기말/ai 과제/11주차_report.md",
