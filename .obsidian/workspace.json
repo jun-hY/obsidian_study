@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "24-2 기말/ai 과제/12주차_report.md",
+                "file": "24-2 기말/리눅스시스템.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "12주차_report"
+              "title": "리눅스시스템"
             }
           }
         ]
@@ -164,6 +164,7 @@
   },
   "active": "e4d6a144d2af7e59",
   "lastOpenFiles": [
+    "24-2 기말/리눅스시스템.md",
     "24-2 기말/ai 과제/14주차_report.md",
     "24-2 기말/ai 과제/12주차_report.md",
     "24-2 기말/ai 과제/11주차_report.md",
@@ -192,7 +193,6 @@
     "구조체.md",
     "변수.md",
     "구조체를 이용한 숫자야구.md",
-    "배열.md",
     "스크린샷 2024-10-04 141854.png",
     "24-2 중간",
     "2일차.zip",
