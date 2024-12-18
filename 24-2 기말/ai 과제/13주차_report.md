@@ -1,125 +1,84 @@
-### **K-최근접 이웃 (KNN) 분류**
+## **지도학습 개요**
 
-- KNN은 가장 가까운 K개의 이웃을 찾아 다수결 원칙으로 분류합니다.
+- **정의**: 지도학습은 입력 데이터와 정답 데이터(타겟)를 활용해 모델을 학습시키는 방법입니다.
+- **사용 분야**: 분류(Classification)와 회귀(Regression)
+- **주요 데이터셋**:
+    - **Iris 데이터셋**
+        - 특성: 꽃받침 길이/너비, 꽃잎 길이/너비
+        - 클래스: setosa, versicolor, virginica (0, 1, 2)
 
-**코드 예시**:
+## **데이터셋**
 
-```python
-from sklearn.neighbors import KNeighborsClassifier
+- **데이터셋 구성**
+    
+    - 데이터의 타입: `numpy.ndarray`
+    - 데이터의 크기: `(150, 4)`
+    - 특성 이름: `['sepal length', 'sepal width', 'petal length', 'petal width']`
+    - 타겟 클래스: `[0, 1, 2]`
+- **데이터셋 예제 코드**:
+    
+    ```python
+from sklearn.datasets import load_iris
+iris_dataset = load_iris()
+print("키:", iris_dataset.keys())
+print("특성의 이름:", iris_dataset['feature_names'])
+print("데이터의 타입:", type(iris_dataset['data']))
+print("데이터의 크기:", iris_dataset['data'].shape)
+    ```
+    
+- **타겟 데이터**:
+    
+    ```python
+print("타겟:", iris_dataset['target'])
+print("타겟 크기:", iris_dataset['target'].shape)
+    ```
+    
+    - 출력 예시: `[0, 0, 0, ... 1, 1, 2, 2]`
+
+## **시각화**
+
+- **산점도 시각화**:
+    
+    ```python
+import matplotlib.pyplot as plt
+import mglearn
+
+X, y = mglearn.datasets.make_forge()
+mglearn.discrete_scatter(X[:, 0], X[:, 1], y)
+plt.legend(["클래스 0", "클래스 1"], loc=1)
+plt.xlabel("첫 번째 특성")
+plt.ylabel("두 번째 특성")
+    ```
+    
+- **결과**: 특성 간 분포를 통해 데이터의 패턴을 확인할 수 있습니다.
+    
+
+## **데이터 나누기**
+
+- **훈련 데이터와 테스트 데이터**:
+    
+    - 훈련 데이터: 모델 학습용
+    - 테스트 데이터: 성능 평가용
+    - 예시 코드:
+        
+        ```python
 from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(iris_dataset['data'], iris_dataset['target'], random_state=0)
-
-clf = KNeighborsClassifier(n_neighbors=3)
-clf.fit(X_train, y_train)
-print("테스트 세트 정확도:", clf.score(X_test, y_test))
-```
-
-- **결과**:
-    - 테스트 세트 정확도: **0.86**
-
-### **K-최근접 이웃 회귀**
-
-- 회귀에서는 이웃의 평균값을 예측값으로 사용합니다.
-
-**코드 예시**:
-
-```python
-from sklearn.neighbors import KNeighborsRegressor
-X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
-
-reg = KNeighborsRegressor(n_neighbors=3)
-reg.fit(X_train, y_train)
-print("테스트 세트 예측:", reg.predict(X_test))
-print("테스트 세트 정확도:", reg.score(X_test, y_test))
-```
-
-- **결과**:
-    - 테스트 세트 정확도: **0.83**
-
----
-
-## **선형 모델**
-
-### **선형 회귀 (Linear Regression)**
-
-- 데이터를 선형 방정식 형태로 학습합니다: y^=w0x0+w1x1+⋯+b\hat{y} = w_0x_0 + w_1x_1 + \dots + b
-
-**코드 예시**:
-
-```python
-from sklearn.linear_model import LinearRegression
-lr = LinearRegression().fit(X_train, y_train)
-print("훈련 세트 점수:", lr.score(X_train, y_train))
-print("테스트 세트 점수:", lr.score(X_test, y_test))
-```
-
-- 결과 예시:
-    - 훈련 세트 점수: **0.67**
-    - 테스트 세트 점수: **0.66**
-
-### **릿지 회귀 (Ridge Regression)**
-
-- 모델의 가중치(ww)에 규제를 추가하여 과적합을 방지합니다.
-
-**코드 예시**:
-
-```python
-from sklearn.linear_model import Ridge
-ridge = Ridge().fit(X_train, y_train)
-print("릿지 회귀 테스트 세트 점수:", ridge.score(X_test, y_test))
-```
-
-- 결과 예시:
-    - **Alpha 값**에 따라 성능이 달라집니다.
-
-### **라쏘 회귀 (Lasso Regression)**
-
-- 불필요한 특성의 가중치를 0으로 만들어 특성 선택을 수행합니다.
-
-**코드 예시**:
-
-```python
-from sklearn.linear_model import Lasso
-lasso = Lasso(alpha=0.01, max_iter=100000).fit(X_train, y_train)
-print("테스트 세트 점수:", lasso.score(X_test, y_test))
-print("사용한 특성의 개수:", np.sum(lasso.coef_ != 0))
-```
-
-- 결과 예시:
-    - 테스트 세트 점수: **0.77**
-    - 사용한 특성 개수: **33**
-
----
-
-## **선형 이진 분류**
-
-### **로지스틱 회귀 (Logistic Regression)**
-
-- 이진 분류에 사용되는 선형 모델입니다.
-
-**코드 예시**:
-
-```python
-from sklearn.linear_model import LogisticRegression
-logreg = LogisticRegression().fit(X_train, y_train)
-print("테스트 세트 점수:", logreg.score(X_test, y_test))
-```
-
-- 결과 예시:
-    - 테스트 세트 점수: **0.857**
-
-### **규제 적용**:
-
-- **C** 파라미터를 조정해 모델의 규제를 설정합니다.
-    - **C=0.01**: 낮은 규제 → 복잡한 모델
-    - **C=100**: 높은 규제 → 단순한 모델
-
-**코드 예시**:
-
-```python
-logreg100 = LogisticRegression(C=100).fit(X_train, y_train)
-print("테스트 세트 점수:", logreg100.score(X_test, y_test))
-```
-
-- 결과 예시:
-    - 테스트 세트 점수: **0.965**
+X_train, X_test, y_train, y_test = train_test_split(
+	iris_dataset['data'], iris_dataset['target'], random_state=0)
+print("훈련 데이터 크기:", X_train.shape)
+print("테스트 데이터 크기:", X_test.shape)
+        ```
+        
+- **산점도 행렬 시각화**:
+    
+    ```python
+import pandas as pd
+iris_dataframe = pd.DataFrame(X_train,
+	columns=iris_dataset.feature_names)
+pd.plotting.scatter_matrix(
+	iris_dataframe, 
+	c=y_train, 
+	figsize=(15, 15), 
+	marker='o'
+)
+    ```
