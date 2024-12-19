@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "24-2 기말/리눅스시스템.md",
+                "file": "24-2 기말/웹 프로그래밍.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "리눅스시스템"
+              "title": "웹 프로그래밍"
             }
           }
         ]
@@ -165,8 +165,10 @@
   },
   "active": "ebb96947fb48e2a7",
   "lastOpenFiles": [
-    "test.md",
+    "24-2 중간/웹 프로그래밍.md",
+    "24-2 기말/웹 프로그래밍.md",
     "24-2 기말/리눅스시스템.md",
+    "test.md",
     "24-2 기말/인공지능.md",
     "24-2 기말/Pasted image 20241219083556.png",
     "24-2 기말/Pasted image 20241219083625.png",
@@ -202,8 +204,6 @@
     "24-2 기말",
     "C언어 2차 강의.md",
     "조건문.md",
-    "C란.md",
-    "구조체.md",
     "24-2 중간",
     "2일차.zip",
     "C언어 1일차.zip"
