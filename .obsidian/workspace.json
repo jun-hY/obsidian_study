@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "24-2 기말/ai 과제/14_1주차_report.md",
+                "file": "C란.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "14_1주차_report"
+              "title": "C란"
             }
           }
         ]
@@ -40,7 +40,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "파일 탐색기"
@@ -154,18 +155,19 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:퀵 스위처 열기": false,
+      "switcher:빠른 전환기 열기": false,
+      "daily-notes:오늘의 일일 노트 열기": false,
       "graph:그래프 뷰 열기": false,
       "canvas:새 캔버스 만들기": false,
-      "daily-notes:오늘의 데일리 노트 열기": false,
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false
     }
   },
   "active": "ebb96947fb48e2a7",
   "lastOpenFiles": [
-    "24-2 기말/ai 과제/14주차_report.md",
+    "C언어 강의 목차.md",
     "24-2 기말/ai 과제/14_1주차_report.md",
+    "24-2 기말/ai 과제/14주차_report.md",
     "24-2 기말/ai 과제/13주차_report.md",
     "24-2 기말/ai 과제/11주차_report.md",
     "24-2 기말/ai 과제/10주차_report.md",
@@ -200,7 +202,6 @@
     "24-2 기말/자동차 구조.md",
     "24-2 기말/네트워크/파이널.md",
     "24-2 기말/네트워크/시스코 장비 설정 체크포인트.md",
-    "24-2 기말/네트워크/ARP, DNS, DHCP, 전송계층 체크포인트.md",
     "24-2 기말/네트워크",
     "24-2 기말",
     "24-2 중간",
