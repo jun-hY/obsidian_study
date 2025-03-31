@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Part2.1. WSL 세팅 가이드.md",
+                "file": "Part2.2. Linux 세팅 가이드.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Part2.1. WSL 세팅 가이드"
+              "title": "Part2.2. Linux 세팅 가이드"
             }
           }
         ],
@@ -194,8 +194,8 @@
   },
   "active": "43b954f7b9dff5f4",
   "lastOpenFiles": [
-    "Part2.2. Linux 세팅 가이드.md",
     "Part2.1. WSL 세팅 가이드.md",
+    "Part2.2. Linux 세팅 가이드.md",
     "변수.md",
     "C언어 강의 목차.md",
     "C언어 2차 강의.md",
